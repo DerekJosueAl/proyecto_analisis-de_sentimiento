@@ -144,6 +144,10 @@ with tab1:
     """, unsafe_allow_html=True)
 
     # ================= FUNCIONES =================
+    import base64
+    import io
+    from fpdf import FPDF
+
     def generar_factura(prompt):
         modelos = [
             "gemini-2.5-flash",
@@ -162,8 +166,8 @@ with tab1:
                 st.warning(f" Modelo {modelo} no disponible ({e}). Probando otro...")
         st.error(" Ningún modelo disponible en este momento. Intenta más tarde.")
         return None
-
-    # CORRECCIÓN AQUÍ: Modificado para que sea compatible con fpdf2 moderno
+    
+    # ✅ Compatible con fpdf2 moderno
     def crear_pdf(factura_texto):
         pdf = FPDF()
         pdf.add_page()
@@ -174,14 +178,16 @@ with tab1:
         pdf.cell(0, 8, "Whatsapp: 8832-9893", ln=True, align="C")
         pdf.ln(8)
         pdf.set_font("Arial", size=9)
+    
+        # Evitar errores de encoding
         texto = factura_texto.encode("latin-1", "replace").decode("latin-1")
         pdf.multi_cell(0, 5, texto)
-        
-        # Guardar en memoria correctamente en versiones nuevas de fpdf
-        pdf_output = io.BytesIO(pdf.output())
-        pdf_output.seek(0)
+    
+        # ✅ Guardar en memoria correctamente
+        pdf_bytes = pdf.output(dest="S").encode("latin-1")
+        pdf_output = io.BytesIO(pdf_bytes)
         return pdf_output
-
+    
     def descarga_automatica(data, filename):
         b64 = base64.b64encode(data).decode()
         html = f"""
@@ -190,7 +196,7 @@ with tab1:
             <script>document.getElementById("download").click();</script>
         </body></html>
         """
-        components.html(html, height=0)
+        st.markdown(html, unsafe_allow_html=True)
 
     # ================= LAYOUT =================
     col_left, col_right = st.columns([2, 1])
