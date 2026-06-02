@@ -9,3 +9,4 @@ fpdf
 google-genai
 python-dotenv
 nltk
+openpyxl
