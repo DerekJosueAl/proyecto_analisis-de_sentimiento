@@ -12,22 +12,15 @@ from utils.preprocess import (
     clean_text, extract_rating, rating_to_sentiment, 
     analyze_problems, PROBLEM_KEYWORDS
 )
-from dotenv import load_dotenv
-import google.genai as genai
-import smtplib
 
-# Cargar variables desde .env
-# Conectar Gemini usando Secrets
-def conectar_gemini():
-    api_key = st.secrets["GEMINI_API_KEY"]
-    return genai.Client(api_key=api_key)
+# ================= CONFIGURACIÓN DE CREDENCIALES VIA SECRETS =================
+# Inicializamos el cliente de Gemini de forma global una sola vez de manera segura
+try:
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+    client = genai.Client(api_key=GEMINI_API_KEY)
+except Exception as e:
+    st.error(f"❌ Error al cargar GEMINI_API_KEY desde st.secrets: {e}")
 
-client = conectar_gemini()
-GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
-client = genai.Client(api_key=GEMINI_API_KEY)
-
-
-# Variables de correo desde Secrets
 EMAIL_REMITENTE = st.secrets["EMAIL_REMITENTE"]
 EMAIL_PASSWORD = st.secrets["EMAIL_PASSWORD"]
 
@@ -120,7 +113,7 @@ def run_app():
             
             if st.button("🚨 Enviar Opinión y Activar Flujos Autónomos", use_container_width=True):
                 if not sim_nombre or not sim_comentario or not sim_email_cliente:
-                    st.error(" Por favor completa todos los campos (Nombre, Correo y Comentario) para poder ejecutar el agente.")
+                    st.error("⚠️ Por favor completa todos los campos (Nombre, Correo y Comentario) para poder ejecutar el agente.")
                 else:
                     sentimiento_determinado = 'Negativo' if sim_rating <= 2 else ('Neutro' if sim_rating == 3 else 'Positivo')
                     
@@ -142,10 +135,8 @@ def run_app():
                     
                     # DETECCIÓN DE CRISIS: Ejecución de la IA Agéntica
                     if sentimiento_determinado == 'Negativo':
-                        with st.spinner(" El Agente Autónomo está analizando la queja y redactando la solución..."):
+                        with st.spinner("🤖 El Agente Autónomo está analizando la queja y redactando la solución..."):
                             try:
-                                client_agente = genai.Client(api_key=GEMINI_API_KEY)
-                                
                                 prompt_agente = f"""
                                 Eres el Agente de Contingencia Automatizado de 'Taller de Motos Casa Tuning'.
                                 Tu objetivo es recuperar de inmediato a un cliente insatisfecho enviándole una propuesta de solución.
@@ -163,13 +154,14 @@ def run_app():
                                 Debes responder ÚNICAMENTE con el cuerpo del correo que se le enviará al cliente. No agregues introducciones, notas o saludos dirigidos a mí. Empieza directamente con el texto del correo.
                                 """
                                 
-                                response = client_agente.models.generate_content(
+                                # Usamos el cliente global ya configurado correctamente arriba
+                                response = client.models.generate_content(
                                     model="gemini-2.5-flash",
                                     contents=prompt_agente
                                 )
                                 correo_generado = response.text
                                 
-                                # El Agente toma la decisión y ejecuta la herramienta de envío real
+                                # El Agente ejecuta el envío real
                                 asunto_mail = f"Disculpa y Solución Inmediata de Casa Tuning para {sim_nombre}"
                                 enviado_ok = enviar_correo_real(sim_email_cliente, asunto_mail, correo_generado)
                                 
@@ -177,13 +169,13 @@ def run_app():
                                     st.session_state.agente_ejecucion = {
                                         "destinatario": sim_email_cliente,
                                         "contenido": correo_generado,
-                                        "status": "Enviado con Éxito mediante Servidor SMTP de Gmail "
+                                        "status": "Enviado con Éxito mediante Servidor SMTP de Gmail ✅"
                                     }
                                 else:
                                     st.session_state.agente_ejecucion = {
                                         "destinatario": sim_email_cliente,
                                         "contenido": correo_generado,
-                                        "status": "Fallo en el canal de salida SMTP (Verifica tus contraseñas de Google) "
+                                        "status": "Fallo en el canal de salida SMTP (Verifica tus contraseñas de aplicación de Google) ❌"
                                     }
                                     
                             except Exception as e:
@@ -192,6 +184,7 @@ def run_app():
                         if "agente_ejecucion" in st.session_state:
                             del st.session_state.agente_ejecucion
                     
+                    # Forzamos el rerun para actualizar la interfaz y pintar las métricas/paneles
                     st.rerun()
 
         # Unir opiniones añadidas a mano con el lote general
@@ -283,7 +276,7 @@ def run_app():
             
             st.markdown("---")
             
-            # Gráfico de pastel (Corregido para analizar fallas de clientes molestos)
+            # Gráfico de pastel
             st.subheader("Fallas críticas más mencionadas por clientes molestos")
             df_negativos = df_filtered[df_filtered['Sentiment'] == 'Negativo']
             if len(df_negativos) > 0:
@@ -322,3 +315,6 @@ def run_app():
         df_uploaded = process_data(df_uploaded)
         if df_uploaded is not None and len(df_uploaded) > 0:
             st.success("Archivo externo procesado con éxito.")
+
+if __name__ == "__main__":
+    run_app()
