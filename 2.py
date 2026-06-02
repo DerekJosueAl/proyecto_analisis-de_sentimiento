@@ -97,6 +97,16 @@ div[data-testid="stTabs"] [data-baseweb="tab-highlight-bar"] {
 tab1, tab2, tab3 = st.tabs(["Facturación", " Análisis de Sentimiento", " DSS"])
 # ================= FACTURACIÓN =================
 with tab1:
+    st.title("🧾 Sistema de Facturación")
+    st.session_state.active_tab = "facturacion"
+
+    # ================= CONFIGURACIÓN =================
+    def conectar_gemini():
+        api_key = st.secrets["GEMINI_API_KEY"]
+        return genai.Client(api_key=api_key)
+
+    client = conectar_gemini()
+with tab1:
     st.title(" Sistema de Facturación")
     st.session_state.active_tab = "facturacion"
 
@@ -105,7 +115,7 @@ with tab1:
     api_key = st.secrets["GEMINI_API_KEY"]
     return genai.Client(api_key=api_key)
 
-client = conectar_gemini()
+    client = conectar_gemini()
 
     #================= SESSION STATE =================
     if 'ventas_diarias' not in st.session_state:
