@@ -100,12 +100,6 @@ with tab1:
     st.title("🧾 Sistema de Facturación")
     st.session_state.active_tab = "facturacion"
 
-    # ================= CONFIGURACIÓN =================
-    def conectar_gemini():
-        api_key = st.secrets["GEMINI_API_KEY"]
-        return genai.Client(api_key=api_key)
-
-    client = conectar_gemini()
     #================= SESSION STATE =================
     if 'ventas_diarias' not in st.session_state:
         st.session_state.ventas_diarias = []
@@ -144,17 +138,8 @@ with tab1:
     """, unsafe_allow_html=True)
 
     # ================= FUNCIONES =================
-    import base64
-    import io
-    from fpdf import FPDF
-
     def generar_factura(prompt):
-        modelos = [
-            "gemini-2.5-flash",
-            "gemini-flash-latest",
-            "gemini-3.5-flash",
-            "gemini-2.5-pro"
-        ]
+        modelos = ["gemini-2.5-flash", "gemini-flash-latest", "gemini-3.5-flash", "gemini-2.5-pro"]
         for modelo in modelos:
             try:
                 response = client.models.generate_content(
@@ -163,11 +148,10 @@ with tab1:
                 )
                 return response.text
             except Exception as e:
-                st.warning(f" Modelo {modelo} no disponible ({e}). Probando otro...")
-        st.error(" Ningún modelo disponible en este momento. Intenta más tarde.")
+                st.warning(f"Modelo {modelo} no disponible ({e}). Probando otro...")
+        st.error("Ningún modelo disponible en este momento. Intenta más tarde.")
         return None
     
-    # ✅ Compatible con fpdf2 moderno
     def crear_pdf(factura_texto):
         pdf = FPDF()
         pdf.add_page()
@@ -179,24 +163,44 @@ with tab1:
         pdf.ln(8)
         pdf.set_font("Arial", size=9)
     
-        # Evitar errores de encoding
         texto = factura_texto.encode("latin-1", "replace").decode("latin-1")
         pdf.multi_cell(0, 5, texto)
     
-        # ✅ Guardar en memoria correctamente
         pdf_bytes = pdf.output(dest="S").encode("latin-1")
         pdf_output = io.BytesIO(pdf_bytes)
         return pdf_output
     
     def descarga_automatica(data, filename):
         b64 = base64.b64encode(data).decode()
+        # Se añade una key única al componente iframe para forzar al navegador a ejecutar el JS en la recarga
         html = f"""
         <html><body>
             <a id="download" href="data:application/pdf;base64,{b64}" download="{filename}"></a>
-            <script>document.getElementById("download").click();</script>
+            <script>
+                setTimeout(function() {{
+                    document.getElementById("download").click();
+                }}, 300);
+            </script>
         </body></html>
         """
-        st.markdown(html, unsafe_allow_html=True)
+        components.html(html, height=0, width=0)
+
+    # 🔥 DETECTOR E INYECTOR DE DESCARGA AUTOMÁTICA AL INICIO DEL TAB
+    if st.session_state.trigger_download and st.session_state.descargar_pdf:
+        st.success("✅ Factura generada con éxito. Los campos han sido liberados.")
+        
+        # Ejecuta la descarga automática mediante el componente nativo de Streamlit
+        descarga_automatica(st.session_state.descargar_pdf["data"], st.session_state.descargar_pdf["filename"])
+        
+        # Deja siempre el botón manual de respaldo visible
+        st.download_button(
+            "📥 ¿No se descargó? Descargar manualmente aquí", 
+            data=st.session_state.descargar_pdf["data"],
+            file_name=st.session_state.descargar_pdf["filename"], 
+            mime="application/pdf",
+            use_container_width=True
+        )
+        st.markdown("---")
 
     # ================= LAYOUT =================
     col_left, col_right = st.columns([2, 1])
@@ -205,8 +209,8 @@ with tab1:
     with col_right:
         st.markdown("### Reporte")
         if st.session_state.ventas_diarias:
-            df = pd.DataFrame(st.session_state.ventas_diarias)
-            servicios = df['producto'].value_counts()
+            df_ventas = pd.DataFrame(st.session_state.ventas_diarias)
+            servicios = df_ventas['producto'].value_counts()
             colores = ['#00BFFF','#FF6B35','#FFD700','#8A2BE2','#00FA9A','#FF1493']
             fig, ax = plt.subplots(figsize=(8, 5))
             ax.pie(servicios.values, labels=servicios.index, autopct='%1.1f%%', colors=colores[:len(servicios)])
@@ -216,7 +220,7 @@ with tab1:
 
     # ================= FORMULARIO FACTURACIÓN =================
     with col_left:
-        st.markdown("###  Datos del Cliente")
+        st.markdown("### Datos del Cliente")
         
         cliente_bloqueado = len(st.session_state.items_factura) > 0
         
@@ -231,7 +235,7 @@ with tab1:
         metodo_pago = st.selectbox("Método de Pago", ["Efectivo","Transferencia"], key=f"metodo_{st.session_state.form_reset}", disabled=cliente_bloqueado)
 
         st.markdown("---")
-        st.markdown("###  Agregar Productos / Servicios")
+        st.markdown("### Agregar Productos / Servicios")
         
         col1, col2 = st.columns(2)
         with col1:
@@ -244,9 +248,9 @@ with tab1:
             cantidad = st.number_input("Cantidad", min_value=1, value=1, key=f"item_cantidad_{st.session_state.item_reset}")
             precio = st.number_input("Precio Unitario", min_value=0.0, value=0.0, key=f"item_precio_{st.session_state.item_reset}")
         
-        if st.button(" Agregar Item a la Tabla", use_container_width=True):
+        if st.button("Agregar Item a la Tabla", use_container_width=True):
             if not cliente:
-                st.error(" Primero debes ingresar el nombre del cliente antes de añadir productos.")
+                st.error("Primero debes ingresar el nombre del cliente antes de añadir productos.")
             elif precio > 0:
                 subtotal = cantidad * precio
                 nuevo_item = {
@@ -264,20 +268,17 @@ with tab1:
             else:
                 st.error("⚠️ El precio unitario debe ser mayor a 0")
 
-        # 3. TABLA INTERACTIVA DE ARTÍCULOS (MEJORADA)
+        # 3. TABLA INTERACTIVA DE ARTÍCULOS
         st.markdown("### 📋 Items Añadidos")
         st.caption("💡 Para eliminar una fila: selecciónala haciendo clic en el extremo izquierdo y presiona la tecla 'Supr' (Delete) de tu teclado.")
         
         if st.session_state.items_factura:
             df_items = pd.DataFrame(st.session_state.items_factura)
-            
-            # Al usar num_rows="dynamic", Streamlit permite al usuario borrar y añadir filas interactivamente
             df_editado = st.data_editor(df_items, use_container_width=True, num_rows="dynamic")
             
-            # Comparamos si cambió el número de registros (eliminación) o sus valores para actualizar el estado real
             if not df_editado.equals(df_items):
                 st.session_state.items_factura = df_editado.to_dict(orient="records")
-                st.rerun() # Recargamos para refrescar el cálculo del total inmediatamente
+                st.rerun()
             
             total_factura = df_editado["Subtotal"].sum() if not df_editado.empty else 0.0
             st.markdown(f"#### **Total acumulado: ${total_factura:.2f}**")
@@ -334,9 +335,12 @@ with tab1:
                     factura = generar_factura(prompt)
                     if factura:
                         pdf = crear_pdf(factura)
-                        filename = f"Factura_{cliente}_{fecha}.pdf"
-                        st.session_state.descargar_pdf = {"data": pdf.getvalue(),"filename": filename}
+                        filename = f"Factura_{cliente}_{fecha.replace('/', '-')}.pdf"
                         
+                        # Almacenamos datos del PDF
+                        st.session_state.descargar_pdf = {"data": pdf.getvalue(), "filename": filename}
+                        
+                        # Mover los items a ventas diarias
                         for item in st.session_state.items_factura:
                             st.session_state.ventas_diarias.append({
                                 "producto": item['Producto/Servicio'],
@@ -344,18 +348,12 @@ with tab1:
                                 "total": item['Subtotal']
                             })
                         
+                        # Limpiar variables de control y activar disparador
                         st.session_state.items_factura = []
                         st.session_state.form_reset += 1
                         st.session_state.item_reset += 1  
                         st.session_state.trigger_download = True
                         st.rerun()
-
-        if st.session_state.trigger_download:
-            st.success("✅ Factura generada con éxito. Los campos han sido liberados y limpiados.")
-            descarga_automatica(st.session_state.descargar_pdf["data"], st.session_state.descargar_pdf["filename"])
-            st.download_button("📥 Descargar manualmente", data=st.session_state.descargar_pdf["data"],
-                            file_name=st.session_state.descargar_pdf["filename"], mime="application/pdf")
-            st.session_state.trigger_download = False
             
     # ================= ANÁLISIS DE SENTIMIENTO =================
     with tab2:
