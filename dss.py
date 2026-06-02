@@ -7,25 +7,42 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse import hstack
 import io
-import os 
-from dotenv import load_dotenv
 import google.genai as genai
 import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
-# Cargar variables desde .env
-load_dotenv()
-
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-EMAIL_REMITENTE = os.getenv("EMAIL_REMITENTE")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+# ================= CONFIGURACIÓN SEGURA =================
+# Variables desde Secrets (Streamlit Cloud)
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+EMAIL_REMITENTE = st.secrets["EMAIL_REMITENTE"]
+EMAIL_PASSWORD = st.secrets["EMAIL_PASSWORD"]
 
 # Conectar Gemini
 client = genai.Client(api_key=GEMINI_API_KEY)
 
+# Función para enviar correo
+def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
+    """Función para enviar correo por Gmail usando Secrets"""
+    try:
+        msg = MIMEMultipart()
+        msg['From'] = EMAIL_REMITENTE
+        msg['To'] = destinatario
+        msg['Subject'] = asunto
+        msg.attach(MIMEText(cuerpo_mensaje, 'plain'))
+
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(EMAIL_REMITENTE, EMAIL_PASSWORD)
+        server.sendmail(EMAIL_REMITENTE, destinatario, msg.as_string())
+        server.quit()
+        return True
+    except Exception as e:
+        st.error(f"❌ Error técnico al enviar el correo: {e}")
+        return False
+
 # ================= DSS APP =================
 def run_app():
-    
-    # --- 1. Cargar datos ---
     st.sidebar.header("📂 Carga de Datos")
     uploaded_file = st.sidebar.file_uploader("Sube tu archivo dataset.csv", type=["csv"])
 
