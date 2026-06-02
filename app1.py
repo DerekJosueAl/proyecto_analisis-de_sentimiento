@@ -12,27 +12,29 @@ from utils.preprocess import (
     clean_text, extract_rating, rating_to_sentiment, 
     analyze_problems, PROBLEM_KEYWORDS
 )
+from dotenv import load_dotenv
 
-# ================= CONFIGURACIÓN DE CREDENCIALES VIA SECRETS =================
-# Inicializamos el cliente de Gemini de forma global una sola vez de manera segura
-try:
-    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
-    client = genai.Client(api_key=GEMINI_API_KEY)
-except Exception as e:
-    st.error(f"❌ Error al cargar GEMINI_API_KEY desde st.secrets: {e}")
+# Cargar variables desde .env
+load_dotenv()
 
-EMAIL_REMITENTE = st.secrets["EMAIL_REMITENTE"]
-EMAIL_PASSWORD = st.secrets["EMAIL_PASSWORD"]
+# Intentar cargar desde Secrets si .env no está disponible (Útil para Streamlit Cloud)
+GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+EMAIL_REMITENTE = st.secrets.get("EMAIL_REMITENTE", os.getenv("EMAIL_REMITENTE"))
+EMAIL_PASSWORD = st.secrets.get("EMAIL_PASSWORD", os.getenv("EMAIL_PASSWORD"))
+
+# Conectar Gemini una única vez de manera global
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
-    """Función para enviar correo por Gmail usando Secrets"""
+    """Función que el Agente ejecuta autónomamente para enviar el correo por Gmail"""
     try:
         msg = MIMEMultipart()
         msg['From'] = EMAIL_REMITENTE
         msg['To'] = destinatario
         msg['Subject'] = asunto
+        
         msg.attach(MIMEText(cuerpo_mensaje, 'plain'))
-
+        
         # Conexión segura con el servidor SMTP de Gmail (Puerto 587)
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
@@ -41,7 +43,7 @@ def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
         server.quit()
         return True
     except Exception as e:
-        st.error(f"❌ Error técnico al enviar el correo: {e}")
+        st.error(f"Error técnico al enviar el correo: {e}")
         return False
 
 def run_app():
@@ -94,24 +96,29 @@ def run_app():
             df = process_data(df_raw)
         
         # ========================================================
-        # SECCIÓN: SIMULADOR DE ALERTAS Y FORMULARIO
+        # SECCIÓN: SIMULADOR DE ALERTAS Y FORMULARIO (CORREGIDO CON st.form)
         # ========================================================
         with st.expander("✍️ Registrar Nueva Opinión de Cliente (Simulador de Alertas para la IA)", expanded=True):
             st.markdown("Ingresa una queja real para ver al Agente Autónomo tomar el control y enviar el correo.")
             
-            col_sim1, col_sim2, col_sim3 = st.columns([2, 1, 1])
-            with col_sim1:
-                sim_nombre = st.text_input("Nombre del Cliente", placeholder="Ej. Juan Pérez")
-            with col_sim2:
-                sim_rating = st.slider("Clasificación (Estrellas)", min_value=1, max_value=5, value=1)
-            with col_sim3:
-                sim_email_cliente = st.text_input("Correo del Cliente (Para pruebas)", placeholder="tu_correo_personal@gmail.com")
+            # Usar st.form previene la pérdida de datos del componente durante la recarga en la nube
+            with st.form("form_opinion", clear_on_submit=True):
+                col_sim1, col_sim2, col_sim3 = st.columns([2, 1, 1])
+                with col_sim1:
+                    sim_nombre = st.text_input("Nombre del Cliente", placeholder="Ej. Juan Pérez")
+                with col_sim2:
+                    sim_rating = st.slider("Clasificación (Estrellas)", min_value=1, max_value=5, value=1)
+                with col_sim3:
+                    sim_email_cliente = st.text_input("Correo del Cliente (Para pruebas)", placeholder="tu_correo_personal@gmail.com")
+                    
+                sim_comentario = st.text_area("Escribe la queja o comentario del cliente...", 
+                                              placeholder="Ej. El tuning quedó mal armado, la moto vibra demasiado en alta velocidad y no me quieren dar garantía.")
+                sim_sucursal = "Matagalpa"
                 
-            sim_comentario = st.text_area("Escribe la queja o comentario del cliente...", 
-                                          placeholder="Ej. El tuning quedó mal armado, la moto vibra demasiado en alta velocidad y no me quieren dar garantía.")
-            sim_sucursal = "Matagalpa"
+                # El botón de envío ahora es un submit de formulario obligatorio
+                enviar_formulario = st.form_submit_button("🚨 Enviar Opinión y Activar Flujos Autónomos", use_container_width=True)
             
-            if st.button("🚨 Enviar Opinión y Activar Flujos Autónomos", use_container_width=True):
+            if enviar_formulario:
                 if not sim_nombre or not sim_comentario or not sim_email_cliente:
                     st.error("⚠️ Por favor completa todos los campos (Nombre, Correo y Comentario) para poder ejecutar el agente.")
                 else:
@@ -146,7 +153,7 @@ def run_app():
                                 - Incidente reportado: "{sim_comentario}"
                                 
                                 Tareas que debes realizar de manera autónoma:
-                                1. Redactar una disculpa corporativa, profesional y empática.
+                                1. Redactar una disculpa corporativa, profesional and empática.
                                 2. Ofrecele algo a cambio de que tan gravé se mire el comentario (ejemplo: revisión gratuita, descuento, etc) y hazlo de forma creativa.
                                 3. Adjuntar un cupón de descuento exclusivo generado por ti con el formato: TUNING-REC-XXXX (reemplaza XXXX con números aleatorios).
                                 4. Al final del correo pon que se guarda el derecho de hacee validó el cupon de descuento o el ofrecimiento, si se demuestra que el cliente es un troll o que no tiene una queja real (ejemplo: solo quiere el descuento sin tener un problema real).
@@ -154,14 +161,13 @@ def run_app():
                                 Debes responder ÚNICAMENTE con el cuerpo del correo que se le enviará al cliente. No agregues introducciones, notas o saludos dirigidos a mí. Empieza directamente con el texto del correo.
                                 """
                                 
-                                # Usamos el cliente global ya configurado correctamente arriba
                                 response = client.models.generate_content(
                                     model="gemini-2.5-flash",
                                     contents=prompt_agente
                                 )
                                 correo_generado = response.text
                                 
-                                # El Agente ejecuta el envío real
+                                # El Agente ejecuta la herramienta de envío real
                                 asunto_mail = f"Disculpa y Solución Inmediata de Casa Tuning para {sim_nombre}"
                                 enviado_ok = enviar_correo_real(sim_email_cliente, asunto_mail, correo_generado)
                                 
@@ -175,7 +181,7 @@ def run_app():
                                     st.session_state.agente_ejecucion = {
                                         "destinatario": sim_email_cliente,
                                         "contenido": correo_generado,
-                                        "status": "Fallo en el canal de salida SMTP (Verifica tus contraseñas de aplicación de Google) ❌"
+                                        "status": "Fallo en el canal de salida SMTP (Verifica credenciales del servidor) ❌"
                                     }
                                     
                             except Exception as e:
@@ -184,7 +190,6 @@ def run_app():
                         if "agente_ejecucion" in st.session_state:
                             del st.session_state.agente_ejecucion
                     
-                    # Forzamos el rerun para actualizar la interfaz y pintar las métricas/paneles
                     st.rerun()
 
         # Unir opiniones añadidas a mano con el lote general
