@@ -7,3 +7,4 @@ seaborn
 scikit-learn
 fpdf
 google-genai
+python-dotenv
