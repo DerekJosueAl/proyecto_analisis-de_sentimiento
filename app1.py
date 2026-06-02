@@ -12,14 +12,19 @@ from utils.preprocess import (
     clean_text, extract_rating, rating_to_sentiment, 
     analyze_problems, PROBLEM_KEYWORDS
 )
+from dotenv import load_dotenv
+import google.genai as genai
+import smtplib
 
-# ========================================================
-# CONFIGURACIÓN DE CREDENCIALES (MODIFICA ESTO)
-# ========================================================
-GEMINI_API_KEY = "AQ.Ab8RN6LCFZCFfiqSkB3aqfWjITfV2tmz-To6Y6HAVg0plsz2GQ"
-EMAIL_REMITENTE = "derk292201@gmail.com"       # Coloca tu correo de Gmail aquí
-EMAIL_PASSWORD = "ombh yyhk sgof dmfd"        # Coloca aquí tus 16 letras de Google
+# Cargar variables desde .env
+load_dotenv()
 
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+EMAIL_REMITENTE = os.getenv("EMAIL_REMITENTE")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+# Conectar Gemini
+client = genai.Client(api_key=GEMINI_API_KEY)
 def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
     """Función que el Agente ejecuta autónomamente para enviar el correo por Gmail"""
     try:
@@ -110,7 +115,7 @@ def run_app():
             
             if st.button("🚨 Enviar Opinión y Activar Flujos Autónomos", use_container_width=True):
                 if not sim_nombre or not sim_comentario or not sim_email_cliente:
-                    st.error("⚠️ Por favor completa todos los campos (Nombre, Correo y Comentario) para poder ejecutar el agente.")
+                    st.error(" Por favor completa todos los campos (Nombre, Correo y Comentario) para poder ejecutar el agente.")
                 else:
                     sentimiento_determinado = 'Negativo' if sim_rating <= 2 else ('Neutro' if sim_rating == 3 else 'Positivo')
                     
@@ -132,7 +137,7 @@ def run_app():
                     
                     # DETECCIÓN DE CRISIS: Ejecución de la IA Agéntica
                     if sentimiento_determinado == 'Negativo':
-                        with st.spinner("🤖 El Agente Autónomo está analizando la queja y redactando la solución..."):
+                        with st.spinner(" El Agente Autónomo está analizando la queja y redactando la solución..."):
                             try:
                                 client_agente = genai.Client(api_key=GEMINI_API_KEY)
                                 
@@ -146,9 +151,9 @@ def run_app():
                                 
                                 Tareas que debes realizar de manera autónoma:
                                 1. Redactar una disculpa corporativa, profesional y empática.
-                                2. Ofrecerle una revisión mecánica de diagnóstico 100% gratuita para solucionar su problema específico.
+                                2. Ofrecele algo a cambio de que tan gravé se mire el comentario (ejemplo: revisión gratuita, descuento, etc) y hazlo de forma creativa.
                                 3. Adjuntar un cupón de descuento exclusivo generado por ti con el formato: TUNING-REC-XXXX (reemplaza XXXX con números aleatorios).
-                                
+                                4. Al final del correo pon que se guarda el derecho de hacee validó el cupon de descuento o el ofrecimiento, si se demuestra que el cliente es un troll o que no tiene una queja real (ejemplo: solo quiere el descuento sin tener un problema real).
                                 Instrucciones de formato estrictas:
                                 Debes responder ÚNICAMENTE con el cuerpo del correo que se le enviará al cliente. No agregues introducciones, notas o saludos dirigidos a mí. Empieza directamente con el texto del correo.
                                 """
@@ -167,13 +172,13 @@ def run_app():
                                     st.session_state.agente_ejecucion = {
                                         "destinatario": sim_email_cliente,
                                         "contenido": correo_generado,
-                                        "status": "Enviado con Éxito mediante Servidor SMTP de Gmail ✅"
+                                        "status": "Enviado con Éxito mediante Servidor SMTP de Gmail "
                                     }
                                 else:
                                     st.session_state.agente_ejecucion = {
                                         "destinatario": sim_email_cliente,
                                         "contenido": correo_generado,
-                                        "status": "Fallo en el canal de salida SMTP (Verifica tus contraseñas de Google) ❌"
+                                        "status": "Fallo en el canal de salida SMTP (Verifica tus contraseñas de Google) "
                                     }
                                     
                             except Exception as e:

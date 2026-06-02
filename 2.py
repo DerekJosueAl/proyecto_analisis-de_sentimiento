@@ -7,9 +7,22 @@ import matplotlib.pyplot as plt
 import base64
 import io
 import streamlit.components.v1 as components
-
+import os
 import dss
 import app1
+from dotenv import load_dotenv
+import google.genai as genai
+import smtplib
+
+# Cargar variables desde .env
+load_dotenv()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+EMAIL_REMITENTE = os.getenv("EMAIL_REMITENTE")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+# Conectar Gemini
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ================= CONFIGURACIÓN =================
 st.set_page_config(page_title="Taller de Motos Casa Tuning", layout="wide")
@@ -87,8 +100,13 @@ with tab1:
     st.session_state.active_tab = "facturacion"
 
     # ================= CONFIGURACIÓN =================
+    load_dotenv()
+
     def conectar_gemini():
-        return genai.Client(api_key="AQ.Ab8RN6LCFZCFfiqSkB3aqfWjITfV2tmz-To6Y6HAVg0plsz2GQ")
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("❌ No se encontró GEMINI_API_KEY en .env")
+        return genai.Client(api_key=api_key)
 
     client = conectar_gemini()
 
@@ -208,7 +226,7 @@ with tab1:
         with col_c3:
             placa = st.text_input("Placa", key=f"placa_{st.session_state.form_reset}", disabled=cliente_bloqueado)
             
-        metodo_pago = st.selectbox("Método de Pago", ["Efectivo","Transferencia","Tarjeta"], key=f"metodo_{st.session_state.form_reset}", disabled=cliente_bloqueado)
+        metodo_pago = st.selectbox("Método de Pago", ["Efectivo","Transferencia"], key=f"metodo_{st.session_state.form_reset}", disabled=cliente_bloqueado)
 
         st.markdown("---")
         st.markdown("###  Agregar Productos / Servicios")

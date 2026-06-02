@@ -7,6 +7,20 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse import hstack
 import io
+import os 
+from dotenv import load_dotenv
+import google.genai as genai
+import smtplib
+
+# Cargar variables desde .env
+load_dotenv()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+EMAIL_REMITENTE = os.getenv("EMAIL_REMITENTE")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+# Conectar Gemini
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ================= DSS APP =================
 def run_app():
