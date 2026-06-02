@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Modelos
+*.pkl
+
+# Datos
+data/*.csv
+!data/plantilla*.csv
+
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db

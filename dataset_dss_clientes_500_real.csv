@@ -1,0 +1,501 @@
+IdReparacion,IdMoto,IdUsuario,Descripcion,Estado,FechaInicio,FechaFin,Total,Fase,Marca,Modelo,UsuarioNombre,cliente
+1,7527,45,Ajuste suspension deportiva,Finalizado,2025-06-04,2025-06-07,1058,Reparacion,BMW,S1000RR,Mario Lopez,Victor Rivas
+2,1482,43,Reparacion mecanica mayor,Finalizado,2025-06-14,2025-06-20,464,Reparacion,Suzuki,GSX-R1000R,Fernando Ruiz,Andres Mena
+3,3420,19,Mantenimiento premium,Entregado,2025-09-02,2025-09-09,2382,Diagnostico,Kawasaki,Ninja ZX-10R,Edwin Chavez,Mario Lopez
+4,4124,11,Ajuste suspension deportiva,En proceso,2025-06-28,2025-07-04,1003,Entrega,Aprilia,RSV4 Factory,Luis Herrera,Alexis Diaz
+5,4326,31,Mantenimiento premium,En proceso,2025-02-02,2025-02-08,2449,Reparacion,Suzuki,GSX-R1000R,Jose Ramirez,Luis Herrera
+6,6294,3,Reparacion mecanica mayor,Entregado,2025-03-05,2025-03-08,394,Diagnostico,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Jose Ramirez
+7,5308,48,Reparacion mecanica mayor,En proceso,2025-01-24,2025-01-29,1989,Pruebas,Yamaha,YZF-R1,Edwin Chavez,Daniel Castillo
+8,4643,10,Ajuste suspension deportiva,Finalizado,2025-06-18,2025-06-21,1899,Pruebas,BMW,S1000RR,Daniel Castillo,Edwin Chavez
+9,3631,22,Mantenimiento premium,Entregado,2025-01-26,2025-01-31,2021,Reparacion,KTM,1290 Super Duke R,Mario Lopez,Luis Herrera
+10,4120,43,Mantenimiento premium,En proceso,2025-03-14,2025-03-16,606,Diagnostico,Yamaha,YZF-R1,Carlos Mendoza,Jose Ramirez
+11,6000,43,Reparacion mecanica mayor,Entregado,2025-05-15,2025-05-22,2053,Diagnostico,Yamaha,YZF-R1,Carlos Mendoza,Fernando Ruiz
+12,6456,43,Instalacion quickshifter,Entregado,2025-09-08,2025-09-09,901,Diagnostico,Ducati,Panigale V4,Jose Ramirez,Edwin Chavez
+13,5870,11,Diagnostico electronico,Entregado,2025-10-22,2025-10-24,1703,Reparacion,Kawasaki,Ninja ZX-10R,Alexis Diaz,Edwin Chavez
+14,8254,8,Mantenimiento premium,Finalizado,2025-08-05,2025-08-06,1549,Reparacion,KTM,1290 Super Duke R,Luis Herrera,Carlos Mendoza
+15,9224,1,Diagnostico electronico,Entregado,2025-02-03,2025-02-04,1953,Diagnostico,Suzuki,GSX-R1000R,Daniel Castillo,Victor Rivas
+16,1810,9,Reparacion mecanica mayor,Entregado,2025-07-09,2025-07-15,1243,Diagnostico,KTM,1290 Super Duke R,Carlos Mendoza,Daniel Castillo
+17,4571,24,Reparacion mecanica mayor,En proceso,2025-04-19,2025-04-25,1675,Reparacion,Suzuki,GSX-R1000R,Fernando Ruiz,Andres Mena
+18,6216,25,Instalacion quickshifter,En proceso,2025-11-24,2025-11-27,1655,Diagnostico,Aprilia,RSV4 Factory,Daniel Castillo,Fernando Ruiz
+19,1087,5,Reparacion mecanica mayor,En proceso,2025-09-15,2025-09-20,1424,Diagnostico,Honda,CBR1000RR-R,Kevin Martinez,Fernando Ruiz
+20,5017,17,Reparacion mecanica mayor,Entregado,2025-04-07,2025-04-12,2056,Diagnostico,Kawasaki,Ninja ZX-10R,Luis Herrera,Alexis Diaz
+21,7037,20,Modificacion tuning ECU,En proceso,2025-03-04,2025-03-10,225,Diagnostico,Kawasaki,Ninja ZX-10R,Edwin Chavez,Fernando Ruiz
+22,2935,18,Diagnostico electronico,Entregado,2025-03-28,2025-04-03,241,Diagnostico,Honda,CBR1000RR-R,Roberto Flores,Daniel Castillo
+23,7069,45,Mantenimiento premium,Entregado,2025-10-25,2025-10-29,2120,Entrega,Aprilia,RSV4 Factory,Edwin Chavez,Kevin Martinez
+24,9712,44,Instalacion quickshifter,Finalizado,2025-03-18,2025-03-20,966,Entrega,Suzuki,GSX-R1000R,Alexis Diaz,Jose Ramirez
+25,9392,3,Diagnostico electronico,Finalizado,2025-01-07,2025-01-11,862,Pruebas,Honda,CBR1000RR-R,Daniel Castillo,Andres Mena
+26,2405,47,Instalacion quickshifter,En proceso,2025-01-28,2025-02-02,2398,Pruebas,Kawasaki,Ninja ZX-10R,Edwin Chavez,Daniel Castillo
+27,4330,34,Cambio de escape deportivo,Finalizado,2025-06-03,2025-06-04,1202,Diagnostico,Ducati,Panigale V4,Luis Herrera,Daniel Castillo
+28,5613,19,Reparacion mecanica mayor,Entregado,2025-04-08,2025-04-13,2345,Entrega,Ducati,Panigale V4,Carlos Mendoza,Jose Ramirez
+29,3190,28,Diagnostico electronico,En proceso,2025-07-09,2025-07-12,1221,Entrega,BMW,S1000RR,Andres Mena,Andres Mena
+30,4788,27,Ajuste suspension deportiva,Finalizado,2025-08-09,2025-08-13,891,Entrega,KTM,1290 Super Duke R,Edwin Chavez,Andres Mena
+31,5414,15,Cambio de escape deportivo,En proceso,2025-11-06,2025-11-08,2189,Diagnostico,Suzuki,GSX-R1000R,Jose Ramirez,Jose Ramirez
+32,5600,27,Ajuste suspension deportiva,Entregado,2025-11-13,2025-11-15,1817,Diagnostico,Suzuki,GSX-R1000R,Roberto Flores,Roberto Flores
+33,2636,27,Diagnostico electronico,Finalizado,2025-11-23,2025-11-26,1487,Reparacion,Honda,CBR1000RR-R,Daniel Castillo,Alexis Diaz
+34,9658,46,Diagnostico electronico,En proceso,2025-01-31,2025-02-06,717,Diagnostico,KTM,1290 Super Duke R,Luis Herrera,Mario Lopez
+35,8979,10,Diagnostico electronico,Entregado,2025-01-19,2025-01-24,2017,Pruebas,Ducati,Panigale V4,Edwin Chavez,Andres Mena
+36,5259,31,Ajuste suspension deportiva,En proceso,2025-08-06,2025-08-10,528,Entrega,KTM,1290 Super Duke R,Roberto Flores,Edwin Chavez
+37,9014,33,Instalacion quickshifter,Finalizado,2025-07-27,2025-07-29,1552,Entrega,Ducati,Panigale V4,Carlos Mendoza,Alexis Diaz
+38,5350,47,Diagnostico electronico,Finalizado,2025-01-21,2025-01-22,1849,Reparacion,Suzuki,GSX-R1000R,Mario Lopez,Mario Lopez
+39,9721,23,Reparacion mecanica mayor,Finalizado,2025-10-23,2025-10-29,504,Diagnostico,BMW,S1000RR,Daniel Castillo,Alexis Diaz
+40,7449,25,Ajuste suspension deportiva,En proceso,2025-11-15,2025-11-18,2455,Diagnostico,Yamaha,YZF-R1,Jose Ramirez,Andres Mena
+41,4396,10,Instalacion quickshifter,Entregado,2025-01-22,2025-01-29,1784,Reparacion,Yamaha,YZF-R1,Daniel Castillo,Roberto Flores
+42,2374,32,Ajuste suspension deportiva,En proceso,2025-04-04,2025-04-09,1282,Entrega,Suzuki,GSX-R1000R,Alexis Diaz,Jose Ramirez
+43,3030,1,Diagnostico electronico,En proceso,2025-03-10,2025-03-17,1421,Pruebas,Honda,CBR1000RR-R,Edwin Chavez,Fernando Ruiz
+44,2782,47,Ajuste suspension deportiva,Entregado,2025-07-09,2025-07-12,2280,Entrega,Aprilia,RSV4 Factory,Carlos Mendoza,Edwin Chavez
+45,1201,26,Mantenimiento premium,Entregado,2025-03-16,2025-03-20,185,Reparacion,Aprilia,RSV4 Factory,Roberto Flores,Andres Mena
+46,9876,10,Mantenimiento premium,Entregado,2025-11-11,2025-11-13,2344,Entrega,Honda,CBR1000RR-R,Fernando Ruiz,Fernando Ruiz
+47,2261,5,Instalacion quickshifter,Finalizado,2025-11-22,2025-11-26,2202,Pruebas,Suzuki,GSX-R1000R,Kevin Martinez,Mario Lopez
+48,3806,16,Reparacion mecanica mayor,Entregado,2025-01-24,2025-01-31,1923,Pruebas,BMW,S1000RR,Mario Lopez,Luis Herrera
+49,4435,5,Reparacion mecanica mayor,En proceso,2025-02-05,2025-02-09,2493,Diagnostico,Aprilia,RSV4 Factory,Edwin Chavez,Daniel Castillo
+50,9767,50,Diagnostico electronico,Entregado,2025-01-04,2025-01-05,1022,Pruebas,Ducati,Panigale V4,Andres Mena,Roberto Flores
+51,9919,5,Instalacion quickshifter,En proceso,2025-11-16,2025-11-17,1258,Pruebas,Honda,CBR1000RR-R,Luis Herrera,Daniel Castillo
+52,5912,34,Mantenimiento premium,Finalizado,2025-03-30,2025-04-06,853,Pruebas,BMW,S1000RR,Luis Herrera,Andres Mena
+53,5232,45,Cambio de escape deportivo,Entregado,2025-10-03,2025-10-07,1277,Diagnostico,Honda,CBR1000RR-R,Daniel Castillo,Victor Rivas
+54,5512,11,Diagnostico electronico,Entregado,2025-08-27,2025-08-28,303,Entrega,BMW,S1000RR,Alexis Diaz,Carlos Mendoza
+55,8628,1,Ajuste suspension deportiva,En proceso,2025-07-07,2025-07-12,1589,Reparacion,Ducati,Panigale V4,Luis Herrera,Andres Mena
+56,6783,8,Mantenimiento premium,Finalizado,2025-10-24,2025-10-27,785,Reparacion,Honda,CBR1000RR-R,Kevin Martinez,Alexis Diaz
+57,9952,1,Reparacion mecanica mayor,En proceso,2025-08-21,2025-08-22,796,Pruebas,Honda,CBR1000RR-R,Jose Ramirez,Jose Ramirez
+58,2176,5,Diagnostico electronico,Finalizado,2025-06-21,2025-06-25,223,Pruebas,Honda,CBR1000RR-R,Edwin Chavez,Luis Herrera
+59,9078,8,Ajuste suspension deportiva,Entregado,2025-06-04,2025-06-05,491,Reparacion,Yamaha,YZF-R1,Victor Rivas,Carlos Mendoza
+60,9942,46,Instalacion quickshifter,En proceso,2025-05-11,2025-05-14,560,Pruebas,Yamaha,YZF-R1,Roberto Flores,Roberto Flores
+61,2855,10,Cambio de escape deportivo,Entregado,2025-11-17,2025-11-23,306,Entrega,Honda,CBR1000RR-R,Roberto Flores,Victor Rivas
+62,5574,34,Ajuste suspension deportiva,Finalizado,2025-05-02,2025-05-09,1598,Pruebas,Yamaha,YZF-R1,Roberto Flores,Daniel Castillo
+63,5967,21,Instalacion quickshifter,En proceso,2025-06-25,2025-06-27,2217,Pruebas,BMW,S1000RR,Roberto Flores,Jose Ramirez
+64,4343,45,Modificacion tuning ECU,Finalizado,2025-07-31,2025-08-01,1311,Entrega,Honda,CBR1000RR-R,Mario Lopez,Andres Mena
+65,4209,12,Reparacion mecanica mayor,Entregado,2025-03-09,2025-03-13,2088,Reparacion,Suzuki,GSX-R1000R,Daniel Castillo,Luis Herrera
+66,7588,7,Reparacion mecanica mayor,Finalizado,2025-01-23,2025-01-28,672,Entrega,KTM,1290 Super Duke R,Mario Lopez,Luis Herrera
+67,2451,9,Ajuste suspension deportiva,Entregado,2025-01-31,2025-02-05,2042,Diagnostico,Honda,CBR1000RR-R,Edwin Chavez,Andres Mena
+68,6579,7,Reparacion mecanica mayor,Finalizado,2025-09-13,2025-09-16,2486,Entrega,Kawasaki,Ninja ZX-10R,Andres Mena,Alexis Diaz
+69,5482,10,Mantenimiento premium,En proceso,2025-10-03,2025-10-06,973,Pruebas,BMW,S1000RR,Mario Lopez,Andres Mena
+70,6865,47,Diagnostico electronico,Entregado,2025-04-03,2025-04-08,686,Reparacion,Yamaha,YZF-R1,Edwin Chavez,Roberto Flores
+71,5355,41,Mantenimiento premium,Entregado,2025-09-12,2025-09-15,695,Entrega,BMW,S1000RR,Fernando Ruiz,Mario Lopez
+72,7880,34,Ajuste suspension deportiva,Finalizado,2025-06-09,2025-06-10,1089,Diagnostico,Aprilia,RSV4 Factory,Fernando Ruiz,Kevin Martinez
+73,9232,9,Mantenimiento premium,Finalizado,2025-08-18,2025-08-22,1747,Entrega,Honda,CBR1000RR-R,Jose Ramirez,Carlos Mendoza
+74,7251,12,Instalacion quickshifter,Entregado,2025-11-16,2025-11-22,2048,Entrega,BMW,S1000RR,Mario Lopez,Daniel Castillo
+75,3316,37,Reparacion mecanica mayor,Entregado,2025-10-17,2025-10-19,2228,Entrega,BMW,S1000RR,Alexis Diaz,Kevin Martinez
+76,3040,29,Cambio de escape deportivo,Finalizado,2025-11-08,2025-11-11,2319,Diagnostico,Suzuki,GSX-R1000R,Fernando Ruiz,Fernando Ruiz
+77,2668,6,Modificacion tuning ECU,En proceso,2025-06-29,2025-07-02,2449,Pruebas,Suzuki,GSX-R1000R,Luis Herrera,Daniel Castillo
+78,4483,3,Cambio de escape deportivo,Finalizado,2025-06-06,2025-06-10,840,Reparacion,Ducati,Panigale V4,Fernando Ruiz,Victor Rivas
+79,8812,44,Mantenimiento premium,Finalizado,2025-06-16,2025-06-22,1291,Reparacion,KTM,1290 Super Duke R,Jose Ramirez,Jose Ramirez
+80,7144,14,Instalacion quickshifter,En proceso,2025-08-23,2025-08-29,1802,Entrega,Ducati,Panigale V4,Daniel Castillo,Andres Mena
+81,7930,43,Instalacion quickshifter,Finalizado,2025-08-06,2025-08-09,1008,Diagnostico,KTM,1290 Super Duke R,Daniel Castillo,Edwin Chavez
+82,4590,50,Cambio de escape deportivo,Entregado,2025-08-30,2025-09-06,372,Entrega,Kawasaki,Ninja ZX-10R,Mario Lopez,Jose Ramirez
+83,4104,17,Ajuste suspension deportiva,En proceso,2025-07-20,2025-07-27,429,Pruebas,BMW,S1000RR,Carlos Mendoza,Daniel Castillo
+84,2265,40,Instalacion quickshifter,Entregado,2025-02-02,2025-02-07,1557,Reparacion,BMW,S1000RR,Fernando Ruiz,Carlos Mendoza
+85,6848,40,Diagnostico electronico,Finalizado,2025-02-10,2025-02-12,842,Pruebas,Suzuki,GSX-R1000R,Carlos Mendoza,Victor Rivas
+86,5086,18,Cambio de escape deportivo,Finalizado,2025-11-02,2025-11-06,1604,Pruebas,Ducati,Panigale V4,Alexis Diaz,Edwin Chavez
+87,6426,50,Cambio de escape deportivo,En proceso,2025-09-04,2025-09-09,280,Entrega,KTM,1290 Super Duke R,Carlos Mendoza,Daniel Castillo
+88,4489,14,Diagnostico electronico,Finalizado,2025-03-16,2025-03-21,1805,Reparacion,Honda,CBR1000RR-R,Edwin Chavez,Kevin Martinez
+89,7038,4,Modificacion tuning ECU,Entregado,2025-07-02,2025-07-05,1158,Entrega,Yamaha,YZF-R1,Kevin Martinez,Roberto Flores
+90,7657,22,Reparacion mecanica mayor,Entregado,2025-06-08,2025-06-10,1200,Diagnostico,BMW,S1000RR,Roberto Flores,Andres Mena
+91,4569,10,Instalacion quickshifter,Finalizado,2025-01-11,2025-01-12,1785,Pruebas,KTM,1290 Super Duke R,Luis Herrera,Luis Herrera
+92,2246,23,Modificacion tuning ECU,Finalizado,2025-03-29,2025-04-03,1369,Diagnostico,Suzuki,GSX-R1000R,Andres Mena,Roberto Flores
+93,1779,40,Reparacion mecanica mayor,Finalizado,2025-01-07,2025-01-09,1216,Reparacion,KTM,1290 Super Duke R,Fernando Ruiz,Victor Rivas
+94,7587,22,Diagnostico electronico,Finalizado,2025-04-10,2025-04-15,667,Pruebas,KTM,1290 Super Duke R,Fernando Ruiz,Fernando Ruiz
+95,2952,34,Reparacion mecanica mayor,Finalizado,2025-04-30,2025-05-07,626,Pruebas,Ducati,Panigale V4,Edwin Chavez,Jose Ramirez
+96,1243,20,Cambio de escape deportivo,En proceso,2025-07-08,2025-07-11,836,Pruebas,Suzuki,GSX-R1000R,Daniel Castillo,Luis Herrera
+97,1542,6,Instalacion quickshifter,En proceso,2025-11-18,2025-11-21,2185,Diagnostico,BMW,S1000RR,Fernando Ruiz,Kevin Martinez
+98,7856,47,Ajuste suspension deportiva,Finalizado,2025-09-03,2025-09-05,1563,Reparacion,Honda,CBR1000RR-R,Mario Lopez,Andres Mena
+99,2446,46,Cambio de escape deportivo,Entregado,2025-06-01,2025-06-05,991,Reparacion,BMW,S1000RR,Daniel Castillo,Andres Mena
+100,6861,3,Cambio de escape deportivo,En proceso,2025-09-24,2025-09-28,2147,Entrega,Honda,CBR1000RR-R,Alexis Diaz,Alexis Diaz
+101,9487,16,Mantenimiento premium,Entregado,2025-07-07,2025-07-10,1504,Entrega,Ducati,Panigale V4,Fernando Ruiz,Alexis Diaz
+102,9764,49,Ajuste suspension deportiva,En proceso,2025-10-05,2025-10-09,2136,Reparacion,KTM,1290 Super Duke R,Kevin Martinez,Victor Rivas
+103,6737,41,Cambio de escape deportivo,Entregado,2025-03-07,2025-03-09,678,Diagnostico,Kawasaki,Ninja ZX-10R,Daniel Castillo,Edwin Chavez
+104,6724,37,Diagnostico electronico,Finalizado,2025-05-10,2025-05-12,631,Reparacion,Aprilia,RSV4 Factory,Jose Ramirez,Fernando Ruiz
+105,6057,8,Instalacion quickshifter,Entregado,2025-02-24,2025-02-27,188,Entrega,Aprilia,RSV4 Factory,Roberto Flores,Edwin Chavez
+106,7503,23,Diagnostico electronico,Finalizado,2025-05-28,2025-05-30,2377,Reparacion,Ducati,Panigale V4,Carlos Mendoza,Edwin Chavez
+107,3128,34,Ajuste suspension deportiva,Entregado,2025-09-04,2025-09-05,2440,Reparacion,KTM,1290 Super Duke R,Victor Rivas,Jose Ramirez
+108,4431,1,Modificacion tuning ECU,En proceso,2025-09-24,2025-09-27,1272,Entrega,Yamaha,YZF-R1,Fernando Ruiz,Roberto Flores
+109,1901,14,Diagnostico electronico,Finalizado,2025-02-04,2025-02-10,333,Entrega,Yamaha,YZF-R1,Andres Mena,Luis Herrera
+110,4041,40,Reparacion mecanica mayor,Finalizado,2025-06-12,2025-06-18,1252,Diagnostico,Aprilia,RSV4 Factory,Daniel Castillo,Jose Ramirez
+111,8272,40,Instalacion quickshifter,En proceso,2025-07-26,2025-07-30,454,Entrega,Ducati,Panigale V4,Carlos Mendoza,Roberto Flores
+112,1813,16,Diagnostico electronico,Finalizado,2025-02-09,2025-02-15,2012,Reparacion,Ducati,Panigale V4,Daniel Castillo,Edwin Chavez
+113,3928,36,Instalacion quickshifter,En proceso,2025-08-08,2025-08-10,1201,Entrega,Suzuki,GSX-R1000R,Daniel Castillo,Andres Mena
+114,9266,45,Ajuste suspension deportiva,Finalizado,2025-03-30,2025-04-06,2383,Diagnostico,Aprilia,RSV4 Factory,Andres Mena,Fernando Ruiz
+115,5599,13,Diagnostico electronico,Entregado,2025-03-28,2025-04-01,788,Diagnostico,Suzuki,GSX-R1000R,Kevin Martinez,Edwin Chavez
+116,5951,6,Modificacion tuning ECU,Finalizado,2025-11-26,2025-11-29,866,Reparacion,Aprilia,RSV4 Factory,Carlos Mendoza,Fernando Ruiz
+117,2792,45,Instalacion quickshifter,Entregado,2025-10-29,2025-11-05,1474,Diagnostico,BMW,S1000RR,Andres Mena,Kevin Martinez
+118,5235,38,Cambio de escape deportivo,Entregado,2025-08-24,2025-08-26,1016,Entrega,Kawasaki,Ninja ZX-10R,Victor Rivas,Edwin Chavez
+119,3916,44,Cambio de escape deportivo,Finalizado,2025-05-24,2025-05-27,2332,Pruebas,Ducati,Panigale V4,Carlos Mendoza,Mario Lopez
+120,1805,42,Mantenimiento premium,En proceso,2025-07-19,2025-07-24,1106,Reparacion,Aprilia,RSV4 Factory,Edwin Chavez,Alexis Diaz
+121,2840,45,Cambio de escape deportivo,Entregado,2025-06-25,2025-07-02,1919,Entrega,Suzuki,GSX-R1000R,Victor Rivas,Carlos Mendoza
+122,1041,10,Ajuste suspension deportiva,Entregado,2025-03-02,2025-03-07,1075,Entrega,Kawasaki,Ninja ZX-10R,Luis Herrera,Kevin Martinez
+123,2086,44,Modificacion tuning ECU,En proceso,2025-01-19,2025-01-21,2190,Entrega,Yamaha,YZF-R1,Alexis Diaz,Roberto Flores
+124,8874,11,Mantenimiento premium,Entregado,2025-05-20,2025-05-25,1809,Entrega,KTM,1290 Super Duke R,Mario Lopez,Andres Mena
+125,6818,22,Instalacion quickshifter,Finalizado,2025-06-25,2025-06-27,525,Reparacion,BMW,S1000RR,Kevin Martinez,Luis Herrera
+126,4656,44,Modificacion tuning ECU,Finalizado,2025-10-27,2025-11-03,1386,Entrega,KTM,1290 Super Duke R,Daniel Castillo,Roberto Flores
+127,3768,17,Mantenimiento premium,Finalizado,2025-04-01,2025-04-03,2142,Pruebas,Kawasaki,Ninja ZX-10R,Luis Herrera,Carlos Mendoza
+128,6408,39,Mantenimiento premium,Entregado,2025-07-07,2025-07-08,2237,Pruebas,Kawasaki,Ninja ZX-10R,Roberto Flores,Alexis Diaz
+129,5375,39,Modificacion tuning ECU,En proceso,2025-05-16,2025-05-17,1197,Reparacion,Suzuki,GSX-R1000R,Jose Ramirez,Daniel Castillo
+130,3646,24,Modificacion tuning ECU,Finalizado,2025-02-23,2025-02-26,724,Entrega,Yamaha,YZF-R1,Daniel Castillo,Mario Lopez
+131,6943,22,Reparacion mecanica mayor,En proceso,2025-06-05,2025-06-10,1811,Diagnostico,BMW,S1000RR,Carlos Mendoza,Kevin Martinez
+132,6286,13,Cambio de escape deportivo,Entregado,2025-01-14,2025-01-21,2368,Diagnostico,Yamaha,YZF-R1,Mario Lopez,Carlos Mendoza
+133,4856,36,Diagnostico electronico,Finalizado,2025-06-29,2025-07-03,1589,Reparacion,BMW,S1000RR,Jose Ramirez,Daniel Castillo
+134,5873,40,Instalacion quickshifter,Finalizado,2025-01-04,2025-01-06,655,Entrega,Yamaha,YZF-R1,Victor Rivas,Jose Ramirez
+135,6271,1,Cambio de escape deportivo,En proceso,2025-01-29,2025-01-31,613,Entrega,BMW,S1000RR,Fernando Ruiz,Fernando Ruiz
+136,2003,30,Mantenimiento premium,Finalizado,2025-06-05,2025-06-08,1777,Diagnostico,Ducati,Panigale V4,Mario Lopez,Mario Lopez
+137,3005,1,Modificacion tuning ECU,Finalizado,2025-03-18,2025-03-21,713,Diagnostico,Honda,CBR1000RR-R,Luis Herrera,Carlos Mendoza
+138,4810,5,Diagnostico electronico,En proceso,2025-08-22,2025-08-25,1046,Diagnostico,Ducati,Panigale V4,Carlos Mendoza,Andres Mena
+139,8784,46,Ajuste suspension deportiva,Finalizado,2025-01-14,2025-01-21,1976,Reparacion,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Roberto Flores
+140,7703,39,Diagnostico electronico,Finalizado,2025-02-07,2025-02-12,660,Diagnostico,KTM,1290 Super Duke R,Fernando Ruiz,Roberto Flores
+141,3051,16,Diagnostico electronico,Entregado,2025-03-20,2025-03-25,2444,Entrega,Aprilia,RSV4 Factory,Andres Mena,Kevin Martinez
+142,5100,17,Modificacion tuning ECU,En proceso,2025-03-02,2025-03-06,519,Diagnostico,Kawasaki,Ninja ZX-10R,Luis Herrera,Alexis Diaz
+143,7218,13,Diagnostico electronico,Finalizado,2025-06-12,2025-06-17,242,Entrega,Aprilia,RSV4 Factory,Andres Mena,Roberto Flores
+144,6238,6,Mantenimiento premium,Entregado,2025-05-07,2025-05-09,2297,Diagnostico,Suzuki,GSX-R1000R,Roberto Flores,Mario Lopez
+145,9075,12,Reparacion mecanica mayor,Entregado,2025-11-05,2025-11-06,455,Entrega,BMW,S1000RR,Alexis Diaz,Edwin Chavez
+146,2045,48,Modificacion tuning ECU,En proceso,2025-03-05,2025-03-07,1395,Reparacion,Ducati,Panigale V4,Victor Rivas,Fernando Ruiz
+147,8737,1,Instalacion quickshifter,Finalizado,2025-09-03,2025-09-07,757,Reparacion,Honda,CBR1000RR-R,Fernando Ruiz,Luis Herrera
+148,6565,45,Cambio de escape deportivo,En proceso,2025-01-21,2025-01-26,1101,Pruebas,Aprilia,RSV4 Factory,Edwin Chavez,Roberto Flores
+149,6104,7,Reparacion mecanica mayor,En proceso,2025-08-10,2025-08-12,160,Pruebas,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Edwin Chavez
+150,1664,40,Instalacion quickshifter,En proceso,2025-07-21,2025-07-22,744,Reparacion,KTM,1290 Super Duke R,Kevin Martinez,Kevin Martinez
+151,6027,22,Instalacion quickshifter,Finalizado,2025-06-03,2025-06-09,1553,Pruebas,Kawasaki,Ninja ZX-10R,Fernando Ruiz,Luis Herrera
+152,1654,44,Diagnostico electronico,Finalizado,2025-04-30,2025-05-04,2421,Pruebas,Aprilia,RSV4 Factory,Fernando Ruiz,Mario Lopez
+153,2605,49,Cambio de escape deportivo,En proceso,2025-08-03,2025-08-08,1641,Entrega,Yamaha,YZF-R1,Kevin Martinez,Daniel Castillo
+154,1710,40,Reparacion mecanica mayor,Entregado,2025-11-20,2025-11-27,763,Diagnostico,Ducati,Panigale V4,Alexis Diaz,Luis Herrera
+155,5440,43,Mantenimiento premium,En proceso,2025-10-28,2025-10-29,2196,Pruebas,Kawasaki,Ninja ZX-10R,Andres Mena,Fernando Ruiz
+156,6029,28,Modificacion tuning ECU,Entregado,2025-11-24,2025-12-01,815,Reparacion,Suzuki,GSX-R1000R,Edwin Chavez,Andres Mena
+157,6563,33,Diagnostico electronico,Entregado,2025-05-08,2025-05-14,1919,Entrega,Suzuki,GSX-R1000R,Carlos Mendoza,Victor Rivas
+158,6740,26,Ajuste suspension deportiva,Entregado,2025-07-12,2025-07-15,2393,Reparacion,Honda,CBR1000RR-R,Jose Ramirez,Edwin Chavez
+159,6704,47,Instalacion quickshifter,Entregado,2025-04-22,2025-04-26,2420,Diagnostico,KTM,1290 Super Duke R,Mario Lopez,Kevin Martinez
+160,3706,27,Ajuste suspension deportiva,Finalizado,2025-04-19,2025-04-22,685,Diagnostico,Yamaha,YZF-R1,Daniel Castillo,Victor Rivas
+161,8051,35,Reparacion mecanica mayor,Finalizado,2025-08-02,2025-08-04,2475,Pruebas,BMW,S1000RR,Luis Herrera,Luis Herrera
+162,1816,28,Diagnostico electronico,Finalizado,2025-03-24,2025-03-25,2384,Entrega,Yamaha,YZF-R1,Fernando Ruiz,Alexis Diaz
+163,6893,33,Instalacion quickshifter,Finalizado,2025-05-12,2025-05-19,992,Diagnostico,Ducati,Panigale V4,Jose Ramirez,Fernando Ruiz
+164,2535,8,Mantenimiento premium,Finalizado,2025-09-02,2025-09-06,1097,Entrega,Honda,CBR1000RR-R,Andres Mena,Roberto Flores
+165,7697,3,Modificacion tuning ECU,Finalizado,2025-11-18,2025-11-23,1863,Reparacion,Honda,CBR1000RR-R,Alexis Diaz,Alexis Diaz
+166,2558,7,Mantenimiento premium,En proceso,2025-10-18,2025-10-22,1474,Pruebas,Yamaha,YZF-R1,Kevin Martinez,Victor Rivas
+167,7407,23,Diagnostico electronico,Finalizado,2025-09-20,2025-09-27,2097,Diagnostico,KTM,1290 Super Duke R,Kevin Martinez,Roberto Flores
+168,2673,37,Modificacion tuning ECU,Finalizado,2025-07-08,2025-07-14,1358,Entrega,KTM,1290 Super Duke R,Mario Lopez,Daniel Castillo
+169,3745,46,Mantenimiento premium,En proceso,2025-02-01,2025-02-06,877,Reparacion,Ducati,Panigale V4,Fernando Ruiz,Jose Ramirez
+170,3510,43,Diagnostico electronico,Entregado,2025-10-17,2025-10-21,1723,Reparacion,Suzuki,GSX-R1000R,Mario Lopez,Daniel Castillo
+171,2720,50,Modificacion tuning ECU,En proceso,2025-06-03,2025-06-08,471,Reparacion,KTM,1290 Super Duke R,Victor Rivas,Fernando Ruiz
+172,6595,43,Reparacion mecanica mayor,Entregado,2025-07-11,2025-07-18,1701,Diagnostico,Aprilia,RSV4 Factory,Roberto Flores,Alexis Diaz
+173,9661,38,Ajuste suspension deportiva,Finalizado,2025-04-09,2025-04-12,894,Diagnostico,Suzuki,GSX-R1000R,Roberto Flores,Daniel Castillo
+174,9021,19,Reparacion mecanica mayor,Entregado,2025-04-15,2025-04-18,2363,Reparacion,Ducati,Panigale V4,Alexis Diaz,Mario Lopez
+175,3872,21,Diagnostico electronico,Finalizado,2025-08-06,2025-08-11,2500,Reparacion,BMW,S1000RR,Roberto Flores,Victor Rivas
+176,7360,29,Cambio de escape deportivo,Finalizado,2025-10-04,2025-10-11,1112,Pruebas,Suzuki,GSX-R1000R,Edwin Chavez,Fernando Ruiz
+177,4413,34,Modificacion tuning ECU,Finalizado,2025-01-06,2025-01-10,609,Diagnostico,Honda,CBR1000RR-R,Fernando Ruiz,Jose Ramirez
+178,4243,18,Modificacion tuning ECU,Entregado,2025-03-28,2025-04-04,2019,Pruebas,Kawasaki,Ninja ZX-10R,Andres Mena,Luis Herrera
+179,7259,43,Reparacion mecanica mayor,En proceso,2025-04-26,2025-04-28,1284,Reparacion,Yamaha,YZF-R1,Victor Rivas,Andres Mena
+180,8783,40,Mantenimiento premium,Finalizado,2025-07-22,2025-07-26,756,Diagnostico,Honda,CBR1000RR-R,Victor Rivas,Kevin Martinez
+181,5684,19,Diagnostico electronico,Entregado,2025-03-09,2025-03-11,436,Pruebas,Kawasaki,Ninja ZX-10R,Luis Herrera,Victor Rivas
+182,9354,15,Reparacion mecanica mayor,Finalizado,2025-07-09,2025-07-12,267,Reparacion,Honda,CBR1000RR-R,Daniel Castillo,Fernando Ruiz
+183,3218,37,Instalacion quickshifter,Entregado,2025-07-26,2025-07-29,552,Reparacion,Aprilia,RSV4 Factory,Roberto Flores,Jose Ramirez
+184,3709,10,Ajuste suspension deportiva,Finalizado,2025-10-07,2025-10-13,1066,Entrega,Suzuki,GSX-R1000R,Fernando Ruiz,Fernando Ruiz
+185,4661,2,Mantenimiento premium,Entregado,2025-04-20,2025-04-26,1031,Reparacion,KTM,1290 Super Duke R,Mario Lopez,Luis Herrera
+186,5421,44,Ajuste suspension deportiva,En proceso,2025-04-05,2025-04-07,1971,Reparacion,Kawasaki,Ninja ZX-10R,Daniel Castillo,Edwin Chavez
+187,7228,49,Reparacion mecanica mayor,Entregado,2025-11-05,2025-11-10,2073,Reparacion,Honda,CBR1000RR-R,Luis Herrera,Edwin Chavez
+188,8421,15,Cambio de escape deportivo,Finalizado,2025-08-25,2025-08-28,1856,Reparacion,Honda,CBR1000RR-R,Roberto Flores,Daniel Castillo
+189,9033,4,Diagnostico electronico,Finalizado,2025-06-13,2025-06-14,311,Entrega,Suzuki,GSX-R1000R,Andres Mena,Jose Ramirez
+190,3832,44,Reparacion mecanica mayor,Entregado,2025-02-10,2025-02-15,2004,Reparacion,Ducati,Panigale V4,Jose Ramirez,Fernando Ruiz
+191,7480,31,Mantenimiento premium,Entregado,2025-08-02,2025-08-05,478,Diagnostico,Ducati,Panigale V4,Alexis Diaz,Victor Rivas
+192,4770,41,Ajuste suspension deportiva,Finalizado,2025-06-28,2025-07-05,1350,Reparacion,Yamaha,YZF-R1,Edwin Chavez,Mario Lopez
+193,2551,24,Instalacion quickshifter,En proceso,2025-06-09,2025-06-10,1521,Diagnostico,BMW,S1000RR,Alexis Diaz,Luis Herrera
+194,4430,31,Cambio de escape deportivo,Entregado,2025-07-02,2025-07-07,231,Pruebas,Suzuki,GSX-R1000R,Victor Rivas,Kevin Martinez
+195,5690,8,Diagnostico electronico,Finalizado,2025-09-23,2025-09-28,794,Reparacion,Kawasaki,Ninja ZX-10R,Daniel Castillo,Edwin Chavez
+196,7297,44,Ajuste suspension deportiva,Entregado,2025-07-09,2025-07-10,1460,Reparacion,Suzuki,GSX-R1000R,Kevin Martinez,Mario Lopez
+197,6768,45,Ajuste suspension deportiva,En proceso,2025-08-10,2025-08-13,1604,Entrega,Kawasaki,Ninja ZX-10R,Mario Lopez,Jose Ramirez
+198,8237,37,Mantenimiento premium,En proceso,2025-04-04,2025-04-06,2412,Entrega,Kawasaki,Ninja ZX-10R,Edwin Chavez,Mario Lopez
+199,7370,26,Modificacion tuning ECU,Entregado,2025-05-24,2025-05-26,1067,Diagnostico,BMW,S1000RR,Jose Ramirez,Mario Lopez
+200,2393,24,Diagnostico electronico,Finalizado,2025-09-16,2025-09-22,660,Entrega,Aprilia,RSV4 Factory,Jose Ramirez,Luis Herrera
+201,1714,27,Instalacion quickshifter,En proceso,2025-01-02,2025-01-04,2065,Diagnostico,BMW,S1000RR,Alexis Diaz,Carlos Mendoza
+202,3794,21,Cambio de escape deportivo,Entregado,2025-03-07,2025-03-11,694,Pruebas,KTM,1290 Super Duke R,Victor Rivas,Fernando Ruiz
+203,3925,12,Reparacion mecanica mayor,Entregado,2025-10-27,2025-11-02,343,Entrega,Aprilia,RSV4 Factory,Jose Ramirez,Andres Mena
+204,9863,17,Reparacion mecanica mayor,Finalizado,2025-05-21,2025-05-23,1814,Entrega,Aprilia,RSV4 Factory,Alexis Diaz,Victor Rivas
+205,8500,4,Cambio de escape deportivo,Finalizado,2025-08-12,2025-08-17,1196,Pruebas,Honda,CBR1000RR-R,Jose Ramirez,Roberto Flores
+206,7072,19,Mantenimiento premium,Entregado,2025-02-04,2025-02-10,1124,Reparacion,Aprilia,RSV4 Factory,Jose Ramirez,Luis Herrera
+207,2195,31,Diagnostico electronico,En proceso,2025-06-26,2025-06-27,1599,Diagnostico,Suzuki,GSX-R1000R,Andres Mena,Daniel Castillo
+208,3247,4,Modificacion tuning ECU,En proceso,2025-03-21,2025-03-22,1698,Entrega,Honda,CBR1000RR-R,Edwin Chavez,Roberto Flores
+209,9483,42,Diagnostico electronico,Entregado,2025-02-12,2025-02-14,382,Reparacion,Suzuki,GSX-R1000R,Edwin Chavez,Carlos Mendoza
+210,7973,25,Reparacion mecanica mayor,En proceso,2025-07-12,2025-07-17,2219,Entrega,Honda,CBR1000RR-R,Roberto Flores,Alexis Diaz
+211,8532,18,Cambio de escape deportivo,Finalizado,2025-08-01,2025-08-05,1140,Diagnostico,KTM,1290 Super Duke R,Jose Ramirez,Andres Mena
+212,3976,43,Diagnostico electronico,Finalizado,2025-11-01,2025-11-04,1274,Reparacion,BMW,S1000RR,Victor Rivas,Carlos Mendoza
+213,7025,3,Instalacion quickshifter,Entregado,2025-01-14,2025-01-15,1717,Entrega,Ducati,Panigale V4,Victor Rivas,Kevin Martinez
+214,6202,29,Diagnostico electronico,En proceso,2025-10-30,2025-11-06,288,Entrega,Ducati,Panigale V4,Mario Lopez,Alexis Diaz
+215,2702,24,Cambio de escape deportivo,Finalizado,2025-05-28,2025-06-03,1506,Pruebas,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Alexis Diaz
+216,1148,20,Ajuste suspension deportiva,En proceso,2025-08-24,2025-08-29,1420,Diagnostico,Yamaha,YZF-R1,Carlos Mendoza,Roberto Flores
+217,8349,40,Modificacion tuning ECU,Finalizado,2025-04-10,2025-04-16,639,Reparacion,Honda,CBR1000RR-R,Luis Herrera,Jose Ramirez
+218,2766,33,Reparacion mecanica mayor,Entregado,2025-01-14,2025-01-18,1747,Reparacion,Kawasaki,Ninja ZX-10R,Kevin Martinez,Fernando Ruiz
+219,4678,48,Mantenimiento premium,Entregado,2025-02-17,2025-02-22,900,Diagnostico,Kawasaki,Ninja ZX-10R,Jose Ramirez,Luis Herrera
+220,7013,44,Mantenimiento premium,Finalizado,2025-06-01,2025-06-03,2273,Pruebas,Yamaha,YZF-R1,Alexis Diaz,Daniel Castillo
+221,1822,12,Instalacion quickshifter,Entregado,2025-11-16,2025-11-21,1552,Diagnostico,Ducati,Panigale V4,Daniel Castillo,Mario Lopez
+222,4329,6,Instalacion quickshifter,Finalizado,2025-11-19,2025-11-22,2118,Reparacion,BMW,S1000RR,Victor Rivas,Alexis Diaz
+223,1881,33,Instalacion quickshifter,En proceso,2025-05-08,2025-05-13,2348,Reparacion,Honda,CBR1000RR-R,Alexis Diaz,Fernando Ruiz
+224,5252,5,Cambio de escape deportivo,Finalizado,2025-04-26,2025-05-01,2341,Pruebas,Honda,CBR1000RR-R,Fernando Ruiz,Mario Lopez
+225,4431,47,Mantenimiento premium,Entregado,2025-04-06,2025-04-09,1178,Reparacion,Ducati,Panigale V4,Kevin Martinez,Victor Rivas
+226,7805,18,Modificacion tuning ECU,Finalizado,2025-11-26,2025-12-03,2364,Pruebas,Honda,CBR1000RR-R,Luis Herrera,Kevin Martinez
+227,4293,8,Cambio de escape deportivo,Entregado,2025-01-08,2025-01-11,850,Reparacion,Yamaha,YZF-R1,Kevin Martinez,Roberto Flores
+228,7730,12,Instalacion quickshifter,Entregado,2025-01-06,2025-01-13,1024,Diagnostico,BMW,S1000RR,Kevin Martinez,Roberto Flores
+229,5774,30,Reparacion mecanica mayor,Entregado,2025-08-16,2025-08-19,2425,Pruebas,Aprilia,RSV4 Factory,Carlos Mendoza,Mario Lopez
+230,4152,31,Modificacion tuning ECU,En proceso,2025-05-24,2025-05-29,1068,Pruebas,Yamaha,YZF-R1,Roberto Flores,Alexis Diaz
+231,9243,46,Diagnostico electronico,En proceso,2025-01-30,2025-02-04,2497,Diagnostico,Kawasaki,Ninja ZX-10R,Victor Rivas,Luis Herrera
+232,6626,17,Ajuste suspension deportiva,Finalizado,2025-01-05,2025-01-10,1252,Diagnostico,Suzuki,GSX-R1000R,Edwin Chavez,Alexis Diaz
+233,6785,23,Ajuste suspension deportiva,En proceso,2025-06-18,2025-06-20,1502,Diagnostico,Suzuki,GSX-R1000R,Alexis Diaz,Mario Lopez
+234,4651,41,Instalacion quickshifter,En proceso,2025-11-16,2025-11-19,1941,Entrega,Aprilia,RSV4 Factory,Mario Lopez,Luis Herrera
+235,8888,32,Modificacion tuning ECU,Finalizado,2025-09-28,2025-10-05,1594,Diagnostico,Kawasaki,Ninja ZX-10R,Daniel Castillo,Roberto Flores
+236,8109,33,Ajuste suspension deportiva,Entregado,2025-10-08,2025-10-10,1771,Entrega,Suzuki,GSX-R1000R,Kevin Martinez,Victor Rivas
+237,8734,3,Diagnostico electronico,En proceso,2025-06-15,2025-06-18,2076,Reparacion,Ducati,Panigale V4,Carlos Mendoza,Daniel Castillo
+238,1230,43,Diagnostico electronico,En proceso,2025-08-10,2025-08-15,2352,Entrega,Yamaha,YZF-R1,Victor Rivas,Daniel Castillo
+239,2241,17,Cambio de escape deportivo,Finalizado,2025-03-05,2025-03-08,1538,Reparacion,Aprilia,RSV4 Factory,Mario Lopez,Carlos Mendoza
+240,3555,21,Reparacion mecanica mayor,Entregado,2025-01-08,2025-01-10,387,Pruebas,Aprilia,RSV4 Factory,Victor Rivas,Victor Rivas
+241,1740,20,Instalacion quickshifter,Entregado,2025-09-23,2025-09-26,824,Diagnostico,Yamaha,YZF-R1,Fernando Ruiz,Jose Ramirez
+242,7812,24,Instalacion quickshifter,Entregado,2025-05-23,2025-05-26,302,Reparacion,Aprilia,RSV4 Factory,Alexis Diaz,Luis Herrera
+243,1053,33,Reparacion mecanica mayor,Finalizado,2025-06-12,2025-06-19,603,Entrega,Yamaha,YZF-R1,Luis Herrera,Victor Rivas
+244,2994,47,Modificacion tuning ECU,En proceso,2025-07-27,2025-07-29,1818,Diagnostico,Honda,CBR1000RR-R,Kevin Martinez,Fernando Ruiz
+245,6630,24,Ajuste suspension deportiva,Entregado,2025-06-29,2025-07-01,2271,Reparacion,Honda,CBR1000RR-R,Kevin Martinez,Roberto Flores
+246,4640,19,Reparacion mecanica mayor,Finalizado,2025-06-10,2025-06-12,1080,Diagnostico,Yamaha,YZF-R1,Carlos Mendoza,Mario Lopez
+247,9220,21,Mantenimiento premium,Entregado,2025-07-25,2025-07-27,1370,Entrega,KTM,1290 Super Duke R,Fernando Ruiz,Alexis Diaz
+248,9224,21,Modificacion tuning ECU,En proceso,2025-06-24,2025-06-25,437,Diagnostico,Suzuki,GSX-R1000R,Victor Rivas,Luis Herrera
+249,8316,2,Mantenimiento premium,Entregado,2025-02-11,2025-02-13,1081,Diagnostico,Kawasaki,Ninja ZX-10R,Mario Lopez,Daniel Castillo
+250,5253,4,Cambio de escape deportivo,Entregado,2025-08-05,2025-08-10,1031,Pruebas,Kawasaki,Ninja ZX-10R,Edwin Chavez,Fernando Ruiz
+251,6926,39,Cambio de escape deportivo,En proceso,2025-02-15,2025-02-17,1021,Entrega,KTM,1290 Super Duke R,Mario Lopez,Victor Rivas
+252,9397,21,Diagnostico electronico,Finalizado,2025-06-20,2025-06-22,290,Diagnostico,KTM,1290 Super Duke R,Victor Rivas,Andres Mena
+253,8688,13,Instalacion quickshifter,Finalizado,2025-05-02,2025-05-06,1788,Entrega,Kawasaki,Ninja ZX-10R,Mario Lopez,Edwin Chavez
+254,7746,2,Modificacion tuning ECU,Entregado,2025-08-29,2025-08-31,2288,Diagnostico,Suzuki,GSX-R1000R,Jose Ramirez,Carlos Mendoza
+255,8178,19,Cambio de escape deportivo,En proceso,2025-11-11,2025-11-12,1803,Diagnostico,Kawasaki,Ninja ZX-10R,Jose Ramirez,Luis Herrera
+256,4292,36,Mantenimiento premium,En proceso,2025-07-25,2025-07-31,1777,Reparacion,Ducati,Panigale V4,Daniel Castillo,Alexis Diaz
+257,5395,34,Reparacion mecanica mayor,Finalizado,2025-09-06,2025-09-11,618,Entrega,KTM,1290 Super Duke R,Alexis Diaz,Luis Herrera
+258,7862,23,Cambio de escape deportivo,Finalizado,2025-08-07,2025-08-11,1256,Diagnostico,Yamaha,YZF-R1,Victor Rivas,Jose Ramirez
+259,2501,41,Reparacion mecanica mayor,Entregado,2025-10-12,2025-10-16,2052,Reparacion,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Jose Ramirez
+260,6961,25,Modificacion tuning ECU,En proceso,2025-11-08,2025-11-10,1242,Reparacion,Yamaha,YZF-R1,Roberto Flores,Luis Herrera
+261,3429,22,Instalacion quickshifter,Entregado,2025-10-22,2025-10-23,1747,Pruebas,BMW,S1000RR,Daniel Castillo,Mario Lopez
+262,7030,47,Modificacion tuning ECU,Entregado,2025-04-30,2025-05-01,1225,Reparacion,Aprilia,RSV4 Factory,Victor Rivas,Roberto Flores
+263,8736,34,Mantenimiento premium,Finalizado,2025-09-15,2025-09-19,972,Entrega,BMW,S1000RR,Fernando Ruiz,Victor Rivas
+264,8597,15,Diagnostico electronico,Finalizado,2025-05-13,2025-05-17,295,Entrega,Suzuki,GSX-R1000R,Victor Rivas,Edwin Chavez
+265,4597,48,Ajuste suspension deportiva,Finalizado,2025-11-09,2025-11-13,2038,Reparacion,Suzuki,GSX-R1000R,Kevin Martinez,Andres Mena
+266,4753,22,Diagnostico electronico,En proceso,2025-10-18,2025-10-19,1239,Reparacion,BMW,S1000RR,Roberto Flores,Alexis Diaz
+267,9232,16,Modificacion tuning ECU,En proceso,2025-04-15,2025-04-16,607,Pruebas,Aprilia,RSV4 Factory,Kevin Martinez,Kevin Martinez
+268,8827,24,Diagnostico electronico,En proceso,2025-11-11,2025-11-17,2271,Diagnostico,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Carlos Mendoza
+269,2829,13,Reparacion mecanica mayor,En proceso,2025-04-08,2025-04-09,1779,Pruebas,Honda,CBR1000RR-R,Luis Herrera,Alexis Diaz
+270,2260,15,Cambio de escape deportivo,Entregado,2025-11-05,2025-11-06,988,Reparacion,Suzuki,GSX-R1000R,Jose Ramirez,Daniel Castillo
+271,1580,49,Cambio de escape deportivo,En proceso,2025-02-10,2025-02-17,1299,Reparacion,Ducati,Panigale V4,Mario Lopez,Fernando Ruiz
+272,8379,30,Instalacion quickshifter,Entregado,2025-04-03,2025-04-07,2408,Diagnostico,Yamaha,YZF-R1,Carlos Mendoza,Mario Lopez
+273,6696,4,Instalacion quickshifter,En proceso,2025-11-25,2025-11-26,1155,Diagnostico,Yamaha,YZF-R1,Alexis Diaz,Fernando Ruiz
+274,8289,37,Mantenimiento premium,Entregado,2025-06-15,2025-06-16,239,Entrega,Aprilia,RSV4 Factory,Victor Rivas,Andres Mena
+275,5478,13,Modificacion tuning ECU,Entregado,2025-09-29,2025-10-02,1928,Entrega,Suzuki,GSX-R1000R,Luis Herrera,Edwin Chavez
+276,1993,15,Diagnostico electronico,En proceso,2025-06-06,2025-06-13,2041,Entrega,Kawasaki,Ninja ZX-10R,Alexis Diaz,Alexis Diaz
+277,5931,32,Reparacion mecanica mayor,En proceso,2025-01-09,2025-01-16,663,Diagnostico,Ducati,Panigale V4,Daniel Castillo,Roberto Flores
+278,7883,4,Diagnostico electronico,Entregado,2025-04-05,2025-04-07,416,Diagnostico,Aprilia,RSV4 Factory,Fernando Ruiz,Alexis Diaz
+279,9721,12,Cambio de escape deportivo,En proceso,2025-09-15,2025-09-22,1015,Pruebas,BMW,S1000RR,Luis Herrera,Jose Ramirez
+280,3399,9,Ajuste suspension deportiva,Finalizado,2025-04-13,2025-04-18,2011,Reparacion,Suzuki,GSX-R1000R,Fernando Ruiz,Victor Rivas
+281,7174,22,Instalacion quickshifter,En proceso,2025-05-03,2025-05-10,1641,Reparacion,BMW,S1000RR,Victor Rivas,Andres Mena
+282,7587,23,Ajuste suspension deportiva,En proceso,2025-05-14,2025-05-21,2130,Reparacion,Ducati,Panigale V4,Andres Mena,Luis Herrera
+283,7344,14,Instalacion quickshifter,Finalizado,2025-08-17,2025-08-19,1315,Reparacion,Ducati,Panigale V4,Alexis Diaz,Andres Mena
+284,5259,5,Diagnostico electronico,Finalizado,2025-08-05,2025-08-07,549,Entrega,Aprilia,RSV4 Factory,Daniel Castillo,Jose Ramirez
+285,1504,43,Instalacion quickshifter,En proceso,2025-03-31,2025-04-01,862,Reparacion,Ducati,Panigale V4,Daniel Castillo,Alexis Diaz
+286,2443,33,Cambio de escape deportivo,Entregado,2025-05-19,2025-05-21,1650,Reparacion,BMW,S1000RR,Mario Lopez,Daniel Castillo
+287,3105,31,Ajuste suspension deportiva,Entregado,2025-09-29,2025-10-02,2127,Diagnostico,Kawasaki,Ninja ZX-10R,Victor Rivas,Edwin Chavez
+288,5705,13,Diagnostico electronico,En proceso,2025-09-16,2025-09-20,685,Pruebas,BMW,S1000RR,Daniel Castillo,Jose Ramirez
+289,3668,40,Modificacion tuning ECU,Entregado,2025-11-03,2025-11-09,1071,Pruebas,Ducati,Panigale V4,Victor Rivas,Edwin Chavez
+290,2759,44,Reparacion mecanica mayor,En proceso,2025-08-23,2025-08-26,478,Entrega,Aprilia,RSV4 Factory,Carlos Mendoza,Fernando Ruiz
+291,5089,6,Instalacion quickshifter,En proceso,2025-01-23,2025-01-26,1846,Diagnostico,Kawasaki,Ninja ZX-10R,Victor Rivas,Victor Rivas
+292,2192,8,Cambio de escape deportivo,En proceso,2025-08-11,2025-08-12,2006,Diagnostico,BMW,S1000RR,Alexis Diaz,Carlos Mendoza
+293,9214,11,Modificacion tuning ECU,En proceso,2025-06-19,2025-06-26,352,Diagnostico,Suzuki,GSX-R1000R,Daniel Castillo,Andres Mena
+294,7582,12,Mantenimiento premium,En proceso,2025-09-23,2025-09-29,672,Entrega,Yamaha,YZF-R1,Andres Mena,Edwin Chavez
+295,5302,44,Modificacion tuning ECU,Entregado,2025-10-11,2025-10-18,2282,Reparacion,Yamaha,YZF-R1,Jose Ramirez,Daniel Castillo
+296,4546,8,Ajuste suspension deportiva,Finalizado,2025-09-24,2025-09-25,359,Entrega,Aprilia,RSV4 Factory,Jose Ramirez,Andres Mena
+297,3164,40,Reparacion mecanica mayor,Entregado,2025-10-28,2025-10-30,2164,Reparacion,Ducati,Panigale V4,Mario Lopez,Kevin Martinez
+298,2190,33,Cambio de escape deportivo,En proceso,2025-06-01,2025-06-03,313,Diagnostico,Yamaha,YZF-R1,Victor Rivas,Jose Ramirez
+299,5015,24,Mantenimiento premium,Finalizado,2025-10-27,2025-10-30,2039,Reparacion,Yamaha,YZF-R1,Alexis Diaz,Edwin Chavez
+300,1635,18,Reparacion mecanica mayor,Entregado,2025-09-21,2025-09-22,1295,Entrega,Yamaha,YZF-R1,Roberto Flores,Mario Lopez
+301,9214,39,Cambio de escape deportivo,Finalizado,2025-01-15,2025-01-16,157,Reparacion,KTM,1290 Super Duke R,Daniel Castillo,Jose Ramirez
+302,2838,21,Instalacion quickshifter,Entregado,2025-04-16,2025-04-18,2054,Entrega,Yamaha,YZF-R1,Carlos Mendoza,Luis Herrera
+303,1382,3,Instalacion quickshifter,Entregado,2025-09-11,2025-09-17,897,Pruebas,Yamaha,YZF-R1,Carlos Mendoza,Mario Lopez
+304,5746,27,Modificacion tuning ECU,Entregado,2025-07-07,2025-07-08,1133,Reparacion,Yamaha,YZF-R1,Fernando Ruiz,Alexis Diaz
+305,1918,40,Cambio de escape deportivo,En proceso,2025-04-11,2025-04-14,736,Pruebas,Yamaha,YZF-R1,Daniel Castillo,Mario Lopez
+306,5180,40,Ajuste suspension deportiva,Entregado,2025-05-31,2025-06-07,1893,Diagnostico,BMW,S1000RR,Victor Rivas,Alexis Diaz
+307,3274,23,Cambio de escape deportivo,Entregado,2025-10-07,2025-10-12,1798,Pruebas,Kawasaki,Ninja ZX-10R,Jose Ramirez,Luis Herrera
+308,8095,23,Diagnostico electronico,En proceso,2025-02-22,2025-02-27,1998,Diagnostico,Aprilia,RSV4 Factory,Mario Lopez,Mario Lopez
+309,8721,31,Ajuste suspension deportiva,Finalizado,2025-05-31,2025-06-02,1456,Pruebas,Kawasaki,Ninja ZX-10R,Daniel Castillo,Edwin Chavez
+310,8116,32,Diagnostico electronico,En proceso,2025-01-22,2025-01-26,472,Entrega,KTM,1290 Super Duke R,Carlos Mendoza,Jose Ramirez
+311,3876,33,Diagnostico electronico,Entregado,2025-01-12,2025-01-16,1468,Diagnostico,BMW,S1000RR,Daniel Castillo,Daniel Castillo
+312,1055,9,Reparacion mecanica mayor,Finalizado,2025-10-09,2025-10-10,2059,Pruebas,BMW,S1000RR,Victor Rivas,Daniel Castillo
+313,4742,42,Cambio de escape deportivo,Finalizado,2025-08-22,2025-08-28,2153,Diagnostico,Aprilia,RSV4 Factory,Jose Ramirez,Kevin Martinez
+314,7724,43,Reparacion mecanica mayor,Entregado,2025-05-12,2025-05-14,381,Entrega,Ducati,Panigale V4,Andres Mena,Jose Ramirez
+315,5014,37,Reparacion mecanica mayor,En proceso,2025-02-13,2025-02-14,2497,Pruebas,KTM,1290 Super Duke R,Carlos Mendoza,Andres Mena
+316,8964,20,Ajuste suspension deportiva,Finalizado,2025-05-30,2025-06-02,463,Entrega,Ducati,Panigale V4,Fernando Ruiz,Alexis Diaz
+317,9934,16,Modificacion tuning ECU,En proceso,2025-08-21,2025-08-25,1805,Reparacion,KTM,1290 Super Duke R,Roberto Flores,Roberto Flores
+318,5352,34,Ajuste suspension deportiva,Finalizado,2025-08-13,2025-08-17,631,Diagnostico,Honda,CBR1000RR-R,Carlos Mendoza,Daniel Castillo
+319,5443,10,Mantenimiento premium,Entregado,2025-05-01,2025-05-05,1028,Entrega,Yamaha,YZF-R1,Carlos Mendoza,Carlos Mendoza
+320,9546,5,Instalacion quickshifter,Finalizado,2025-01-08,2025-01-13,1032,Diagnostico,Suzuki,GSX-R1000R,Kevin Martinez,Roberto Flores
+321,5374,27,Mantenimiento premium,Entregado,2025-05-29,2025-05-30,1932,Pruebas,Kawasaki,Ninja ZX-10R,Mario Lopez,Luis Herrera
+322,6722,44,Reparacion mecanica mayor,Entregado,2025-08-21,2025-08-23,1107,Entrega,Suzuki,GSX-R1000R,Jose Ramirez,Roberto Flores
+323,1797,18,Ajuste suspension deportiva,En proceso,2025-04-13,2025-04-19,1249,Diagnostico,Aprilia,RSV4 Factory,Kevin Martinez,Jose Ramirez
+324,8605,49,Mantenimiento premium,Finalizado,2025-02-18,2025-02-23,1204,Pruebas,Ducati,Panigale V4,Kevin Martinez,Daniel Castillo
+325,7559,15,Reparacion mecanica mayor,Finalizado,2025-06-04,2025-06-11,704,Diagnostico,Honda,CBR1000RR-R,Edwin Chavez,Andres Mena
+326,1582,23,Instalacion quickshifter,Finalizado,2025-08-11,2025-08-14,2192,Diagnostico,Suzuki,GSX-R1000R,Fernando Ruiz,Mario Lopez
+327,9745,6,Diagnostico electronico,Entregado,2025-10-14,2025-10-21,1851,Reparacion,Aprilia,RSV4 Factory,Victor Rivas,Edwin Chavez
+328,4161,30,Mantenimiento premium,Finalizado,2025-08-28,2025-09-03,955,Entrega,KTM,1290 Super Duke R,Luis Herrera,Alexis Diaz
+329,4430,40,Modificacion tuning ECU,En proceso,2025-07-02,2025-07-05,1712,Entrega,Suzuki,GSX-R1000R,Kevin Martinez,Fernando Ruiz
+330,6252,13,Reparacion mecanica mayor,Entregado,2025-01-13,2025-01-16,413,Diagnostico,Suzuki,GSX-R1000R,Luis Herrera,Fernando Ruiz
+331,2936,48,Diagnostico electronico,Finalizado,2025-03-16,2025-03-19,902,Diagnostico,Yamaha,YZF-R1,Roberto Flores,Mario Lopez
+332,6931,47,Reparacion mecanica mayor,Entregado,2025-07-19,2025-07-21,1185,Diagnostico,Kawasaki,Ninja ZX-10R,Daniel Castillo,Andres Mena
+333,2520,38,Ajuste suspension deportiva,Entregado,2025-09-28,2025-10-05,1613,Entrega,Yamaha,YZF-R1,Roberto Flores,Mario Lopez
+334,4349,38,Diagnostico electronico,En proceso,2025-09-27,2025-09-29,258,Pruebas,Yamaha,YZF-R1,Edwin Chavez,Roberto Flores
+335,7300,18,Mantenimiento premium,Finalizado,2025-11-11,2025-11-18,580,Diagnostico,BMW,S1000RR,Edwin Chavez,Edwin Chavez
+336,9290,20,Cambio de escape deportivo,Entregado,2025-08-02,2025-08-06,2136,Pruebas,Honda,CBR1000RR-R,Kevin Martinez,Victor Rivas
+337,3565,3,Ajuste suspension deportiva,En proceso,2025-07-18,2025-07-20,641,Pruebas,BMW,S1000RR,Roberto Flores,Mario Lopez
+338,1389,23,Ajuste suspension deportiva,Finalizado,2025-06-27,2025-06-28,378,Reparacion,BMW,S1000RR,Roberto Flores,Alexis Diaz
+339,2158,50,Ajuste suspension deportiva,Finalizado,2025-03-10,2025-03-11,1554,Entrega,Honda,CBR1000RR-R,Kevin Martinez,Alexis Diaz
+340,3496,24,Instalacion quickshifter,Entregado,2025-03-16,2025-03-19,527,Entrega,Ducati,Panigale V4,Jose Ramirez,Alexis Diaz
+341,5466,35,Cambio de escape deportivo,En proceso,2025-07-18,2025-07-23,1327,Diagnostico,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Jose Ramirez
+342,1703,27,Ajuste suspension deportiva,Finalizado,2025-07-15,2025-07-19,1177,Pruebas,BMW,S1000RR,Carlos Mendoza,Daniel Castillo
+343,3296,36,Mantenimiento premium,Entregado,2025-04-14,2025-04-21,444,Diagnostico,KTM,1290 Super Duke R,Kevin Martinez,Daniel Castillo
+344,7193,2,Mantenimiento premium,En proceso,2025-08-05,2025-08-11,2496,Reparacion,Yamaha,YZF-R1,Jose Ramirez,Roberto Flores
+345,2634,21,Modificacion tuning ECU,Entregado,2025-04-23,2025-04-25,1303,Pruebas,Ducati,Panigale V4,Roberto Flores,Daniel Castillo
+346,1615,27,Modificacion tuning ECU,Finalizado,2025-08-22,2025-08-28,2072,Entrega,Kawasaki,Ninja ZX-10R,Roberto Flores,Fernando Ruiz
+347,7698,28,Diagnostico electronico,En proceso,2025-04-18,2025-04-25,1755,Pruebas,Suzuki,GSX-R1000R,Andres Mena,Victor Rivas
+348,7855,46,Modificacion tuning ECU,Entregado,2025-10-19,2025-10-24,2316,Diagnostico,Aprilia,RSV4 Factory,Mario Lopez,Victor Rivas
+349,6971,8,Reparacion mecanica mayor,En proceso,2025-03-14,2025-03-20,2002,Pruebas,Ducati,Panigale V4,Andres Mena,Mario Lopez
+350,2775,34,Reparacion mecanica mayor,Finalizado,2025-10-13,2025-10-17,2042,Entrega,Ducati,Panigale V4,Alexis Diaz,Luis Herrera
+351,5663,29,Ajuste suspension deportiva,Entregado,2025-05-10,2025-05-11,404,Reparacion,Ducati,Panigale V4,Roberto Flores,Roberto Flores
+352,9973,12,Instalacion quickshifter,Finalizado,2025-02-01,2025-02-02,882,Diagnostico,Suzuki,GSX-R1000R,Fernando Ruiz,Andres Mena
+353,6897,34,Reparacion mecanica mayor,Entregado,2025-07-25,2025-07-31,2073,Reparacion,Yamaha,YZF-R1,Carlos Mendoza,Roberto Flores
+354,4719,46,Mantenimiento premium,Finalizado,2025-10-08,2025-10-14,1777,Pruebas,BMW,S1000RR,Mario Lopez,Roberto Flores
+355,3463,14,Modificacion tuning ECU,Entregado,2025-10-30,2025-11-01,928,Reparacion,Kawasaki,Ninja ZX-10R,Luis Herrera,Daniel Castillo
+356,2447,33,Modificacion tuning ECU,En proceso,2025-08-19,2025-08-23,2216,Entrega,Yamaha,YZF-R1,Jose Ramirez,Jose Ramirez
+357,2409,21,Modificacion tuning ECU,Entregado,2025-04-01,2025-04-02,839,Diagnostico,Aprilia,RSV4 Factory,Carlos Mendoza,Luis Herrera
+358,3959,13,Modificacion tuning ECU,Finalizado,2025-11-01,2025-11-02,1598,Pruebas,Kawasaki,Ninja ZX-10R,Victor Rivas,Alexis Diaz
+359,1618,27,Instalacion quickshifter,En proceso,2025-05-11,2025-05-16,1264,Pruebas,Honda,CBR1000RR-R,Fernando Ruiz,Andres Mena
+360,8182,20,Modificacion tuning ECU,Finalizado,2025-08-30,2025-09-01,730,Diagnostico,Aprilia,RSV4 Factory,Fernando Ruiz,Kevin Martinez
+361,3927,23,Diagnostico electronico,Entregado,2025-04-12,2025-04-15,2273,Pruebas,Suzuki,GSX-R1000R,Roberto Flores,Jose Ramirez
+362,4502,38,Reparacion mecanica mayor,En proceso,2025-11-20,2025-11-22,2462,Diagnostico,Aprilia,RSV4 Factory,Luis Herrera,Fernando Ruiz
+363,7936,23,Ajuste suspension deportiva,Entregado,2025-05-16,2025-05-17,2280,Diagnostico,Aprilia,RSV4 Factory,Kevin Martinez,Mario Lopez
+364,5529,44,Ajuste suspension deportiva,Finalizado,2025-04-01,2025-04-03,362,Reparacion,Kawasaki,Ninja ZX-10R,Jose Ramirez,Andres Mena
+365,1172,15,Reparacion mecanica mayor,Entregado,2025-01-14,2025-01-15,700,Reparacion,Yamaha,YZF-R1,Victor Rivas,Luis Herrera
+366,6861,27,Cambio de escape deportivo,Entregado,2025-03-02,2025-03-03,1824,Reparacion,Honda,CBR1000RR-R,Andres Mena,Daniel Castillo
+367,9997,28,Modificacion tuning ECU,En proceso,2025-07-21,2025-07-27,857,Reparacion,Aprilia,RSV4 Factory,Jose Ramirez,Edwin Chavez
+368,4524,15,Ajuste suspension deportiva,En proceso,2025-01-31,2025-02-03,1219,Entrega,Aprilia,RSV4 Factory,Alexis Diaz,Andres Mena
+369,4854,31,Reparacion mecanica mayor,En proceso,2025-02-27,2025-03-02,1506,Entrega,Suzuki,GSX-R1000R,Luis Herrera,Alexis Diaz
+370,5125,38,Cambio de escape deportivo,Finalizado,2025-07-18,2025-07-25,2424,Reparacion,KTM,1290 Super Duke R,Luis Herrera,Andres Mena
+371,5669,10,Ajuste suspension deportiva,Finalizado,2025-08-19,2025-08-23,1583,Entrega,Aprilia,RSV4 Factory,Edwin Chavez,Fernando Ruiz
+372,1954,28,Mantenimiento premium,Entregado,2025-09-07,2025-09-13,596,Reparacion,Yamaha,YZF-R1,Luis Herrera,Carlos Mendoza
+373,2863,44,Modificacion tuning ECU,En proceso,2025-07-27,2025-07-28,1476,Pruebas,Honda,CBR1000RR-R,Alexis Diaz,Fernando Ruiz
+374,6493,46,Modificacion tuning ECU,Finalizado,2025-10-08,2025-10-11,855,Reparacion,KTM,1290 Super Duke R,Kevin Martinez,Kevin Martinez
+375,9031,39,Diagnostico electronico,Entregado,2025-11-21,2025-11-23,2265,Entrega,Suzuki,GSX-R1000R,Mario Lopez,Alexis Diaz
+376,7286,47,Cambio de escape deportivo,Entregado,2025-03-11,2025-03-13,1089,Reparacion,Kawasaki,Ninja ZX-10R,Mario Lopez,Mario Lopez
+377,2211,26,Cambio de escape deportivo,Entregado,2025-08-25,2025-09-01,1412,Entrega,Honda,CBR1000RR-R,Carlos Mendoza,Jose Ramirez
+378,6137,8,Cambio de escape deportivo,En proceso,2025-11-27,2025-12-02,911,Pruebas,Aprilia,RSV4 Factory,Carlos Mendoza,Daniel Castillo
+379,8085,22,Instalacion quickshifter,Entregado,2025-05-16,2025-05-23,2289,Reparacion,Honda,CBR1000RR-R,Daniel Castillo,Fernando Ruiz
+380,8299,14,Modificacion tuning ECU,En proceso,2025-03-24,2025-03-27,468,Entrega,Yamaha,YZF-R1,Roberto Flores,Edwin Chavez
+381,4951,33,Mantenimiento premium,Entregado,2025-06-03,2025-06-09,2260,Entrega,Suzuki,GSX-R1000R,Carlos Mendoza,Jose Ramirez
+382,7787,13,Mantenimiento premium,Finalizado,2025-03-20,2025-03-27,1497,Diagnostico,Aprilia,RSV4 Factory,Daniel Castillo,Carlos Mendoza
+383,6269,28,Ajuste suspension deportiva,En proceso,2025-11-04,2025-11-09,1158,Entrega,Yamaha,YZF-R1,Carlos Mendoza,Alexis Diaz
+384,3721,24,Ajuste suspension deportiva,Finalizado,2025-02-21,2025-02-23,1824,Pruebas,Kawasaki,Ninja ZX-10R,Edwin Chavez,Luis Herrera
+385,6546,46,Instalacion quickshifter,Finalizado,2025-02-12,2025-02-18,1876,Pruebas,Kawasaki,Ninja ZX-10R,Fernando Ruiz,Victor Rivas
+386,2598,40,Reparacion mecanica mayor,Finalizado,2025-07-23,2025-07-24,1671,Reparacion,Yamaha,YZF-R1,Victor Rivas,Andres Mena
+387,9285,21,Modificacion tuning ECU,Finalizado,2025-01-14,2025-01-19,2110,Pruebas,BMW,S1000RR,Mario Lopez,Fernando Ruiz
+388,1100,49,Reparacion mecanica mayor,Entregado,2025-05-15,2025-05-21,1364,Entrega,Aprilia,RSV4 Factory,Andres Mena,Kevin Martinez
+389,5232,45,Ajuste suspension deportiva,Finalizado,2025-01-29,2025-01-30,2408,Entrega,Aprilia,RSV4 Factory,Edwin Chavez,Kevin Martinez
+390,3677,4,Ajuste suspension deportiva,En proceso,2025-11-18,2025-11-24,1818,Pruebas,Aprilia,RSV4 Factory,Roberto Flores,Alexis Diaz
+391,5198,30,Mantenimiento premium,Entregado,2025-02-25,2025-03-04,1698,Entrega,BMW,S1000RR,Carlos Mendoza,Edwin Chavez
+392,2217,9,Modificacion tuning ECU,En proceso,2025-06-17,2025-06-18,1031,Diagnostico,BMW,S1000RR,Mario Lopez,Carlos Mendoza
+393,2371,1,Cambio de escape deportivo,En proceso,2025-01-08,2025-01-15,1323,Reparacion,KTM,1290 Super Duke R,Luis Herrera,Luis Herrera
+394,8269,1,Instalacion quickshifter,Entregado,2025-03-20,2025-03-24,683,Pruebas,Honda,CBR1000RR-R,Jose Ramirez,Jose Ramirez
+395,8274,8,Reparacion mecanica mayor,Finalizado,2025-01-19,2025-01-25,1795,Reparacion,BMW,S1000RR,Roberto Flores,Andres Mena
+396,1013,49,Modificacion tuning ECU,Finalizado,2025-07-17,2025-07-24,770,Reparacion,Suzuki,GSX-R1000R,Carlos Mendoza,Roberto Flores
+397,1992,26,Mantenimiento premium,Finalizado,2025-04-22,2025-04-26,2348,Entrega,Kawasaki,Ninja ZX-10R,Luis Herrera,Daniel Castillo
+398,5449,6,Modificacion tuning ECU,Finalizado,2025-10-11,2025-10-17,1850,Diagnostico,BMW,S1000RR,Andres Mena,Alexis Diaz
+399,6133,36,Modificacion tuning ECU,Finalizado,2025-05-03,2025-05-10,206,Pruebas,Yamaha,YZF-R1,Roberto Flores,Fernando Ruiz
+400,4801,17,Diagnostico electronico,En proceso,2025-09-04,2025-09-10,925,Entrega,Honda,CBR1000RR-R,Fernando Ruiz,Kevin Martinez
+401,4673,21,Reparacion mecanica mayor,Entregado,2025-02-27,2025-03-06,2368,Pruebas,BMW,S1000RR,Victor Rivas,Andres Mena
+402,6729,29,Modificacion tuning ECU,En proceso,2025-01-03,2025-01-09,2121,Pruebas,KTM,1290 Super Duke R,Carlos Mendoza,Jose Ramirez
+403,7086,45,Diagnostico electronico,En proceso,2025-01-09,2025-01-15,613,Entrega,Yamaha,YZF-R1,Victor Rivas,Roberto Flores
+404,2008,33,Instalacion quickshifter,Finalizado,2025-01-03,2025-01-10,2170,Diagnostico,Ducati,Panigale V4,Victor Rivas,Andres Mena
+405,7726,45,Diagnostico electronico,Finalizado,2025-11-03,2025-11-07,592,Pruebas,Suzuki,GSX-R1000R,Luis Herrera,Edwin Chavez
+406,3285,2,Instalacion quickshifter,Finalizado,2025-02-26,2025-03-01,1852,Reparacion,BMW,S1000RR,Fernando Ruiz,Luis Herrera
+407,6122,19,Diagnostico electronico,En proceso,2025-07-03,2025-07-06,1665,Pruebas,Yamaha,YZF-R1,Fernando Ruiz,Edwin Chavez
+408,2617,17,Reparacion mecanica mayor,En proceso,2025-08-07,2025-08-13,1072,Diagnostico,Yamaha,YZF-R1,Jose Ramirez,Victor Rivas
+409,3551,14,Mantenimiento premium,Finalizado,2025-08-18,2025-08-19,762,Reparacion,Kawasaki,Ninja ZX-10R,Roberto Flores,Roberto Flores
+410,9966,10,Instalacion quickshifter,Finalizado,2025-07-08,2025-07-10,1313,Reparacion,Suzuki,GSX-R1000R,Andres Mena,Jose Ramirez
+411,7703,9,Reparacion mecanica mayor,Finalizado,2025-08-26,2025-09-02,1988,Pruebas,Suzuki,GSX-R1000R,Luis Herrera,Daniel Castillo
+412,4301,6,Modificacion tuning ECU,Finalizado,2025-09-01,2025-09-04,401,Pruebas,Yamaha,YZF-R1,Fernando Ruiz,Carlos Mendoza
+413,5454,20,Cambio de escape deportivo,En proceso,2025-06-27,2025-06-30,2021,Diagnostico,Yamaha,YZF-R1,Fernando Ruiz,Andres Mena
+414,3654,40,Reparacion mecanica mayor,En proceso,2025-05-01,2025-05-05,274,Pruebas,Suzuki,GSX-R1000R,Jose Ramirez,Carlos Mendoza
+415,1291,27,Reparacion mecanica mayor,Entregado,2025-02-08,2025-02-10,394,Reparacion,Suzuki,GSX-R1000R,Fernando Ruiz,Alexis Diaz
+416,3818,13,Modificacion tuning ECU,Entregado,2025-08-26,2025-08-29,2190,Pruebas,Suzuki,GSX-R1000R,Roberto Flores,Kevin Martinez
+417,3440,19,Diagnostico electronico,Entregado,2025-08-01,2025-08-03,403,Pruebas,Honda,CBR1000RR-R,Alexis Diaz,Edwin Chavez
+418,5843,42,Cambio de escape deportivo,En proceso,2025-06-09,2025-06-15,1326,Entrega,Aprilia,RSV4 Factory,Mario Lopez,Jose Ramirez
+419,9365,16,Diagnostico electronico,En proceso,2025-07-11,2025-07-16,2084,Reparacion,BMW,S1000RR,Alexis Diaz,Andres Mena
+420,3770,18,Cambio de escape deportivo,En proceso,2025-09-28,2025-09-29,505,Diagnostico,Suzuki,GSX-R1000R,Kevin Martinez,Alexis Diaz
+421,9838,25,Mantenimiento premium,Finalizado,2025-08-24,2025-08-28,1052,Entrega,Honda,CBR1000RR-R,Kevin Martinez,Carlos Mendoza
+422,3833,47,Instalacion quickshifter,Entregado,2025-03-24,2025-03-27,1875,Diagnostico,BMW,S1000RR,Luis Herrera,Victor Rivas
+423,6666,9,Reparacion mecanica mayor,Entregado,2025-09-04,2025-09-07,938,Reparacion,Ducati,Panigale V4,Mario Lopez,Carlos Mendoza
+424,4050,14,Reparacion mecanica mayor,En proceso,2025-02-26,2025-02-28,1967,Entrega,Yamaha,YZF-R1,Edwin Chavez,Carlos Mendoza
+425,3665,13,Instalacion quickshifter,En proceso,2025-09-18,2025-09-24,1352,Reparacion,Ducati,Panigale V4,Alexis Diaz,Carlos Mendoza
+426,3948,38,Ajuste suspension deportiva,En proceso,2025-07-31,2025-08-05,1505,Entrega,Kawasaki,Ninja ZX-10R,Edwin Chavez,Fernando Ruiz
+427,4074,43,Ajuste suspension deportiva,En proceso,2025-06-10,2025-06-14,1334,Entrega,Honda,CBR1000RR-R,Carlos Mendoza,Andres Mena
+428,8534,34,Diagnostico electronico,Entregado,2025-05-20,2025-05-24,551,Diagnostico,BMW,S1000RR,Alexis Diaz,Victor Rivas
+429,1692,34,Diagnostico electronico,Finalizado,2025-01-07,2025-01-13,722,Pruebas,BMW,S1000RR,Fernando Ruiz,Carlos Mendoza
+430,9751,22,Modificacion tuning ECU,En proceso,2025-08-26,2025-08-28,1289,Entrega,Kawasaki,Ninja ZX-10R,Edwin Chavez,Alexis Diaz
+431,9886,42,Cambio de escape deportivo,En proceso,2025-08-25,2025-08-26,817,Diagnostico,BMW,S1000RR,Alexis Diaz,Fernando Ruiz
+432,1649,41,Diagnostico electronico,En proceso,2025-07-13,2025-07-18,1232,Reparacion,Honda,CBR1000RR-R,Carlos Mendoza,Alexis Diaz
+433,4384,31,Diagnostico electronico,En proceso,2025-11-27,2025-12-01,2154,Pruebas,KTM,1290 Super Duke R,Andres Mena,Edwin Chavez
+434,2267,3,Modificacion tuning ECU,Entregado,2025-10-20,2025-10-26,922,Reparacion,Kawasaki,Ninja ZX-10R,Kevin Martinez,Mario Lopez
+435,4322,22,Modificacion tuning ECU,Entregado,2025-03-30,2025-04-02,1271,Pruebas,Honda,CBR1000RR-R,Luis Herrera,Kevin Martinez
+436,8184,7,Reparacion mecanica mayor,Finalizado,2025-09-27,2025-09-30,1455,Pruebas,Suzuki,GSX-R1000R,Mario Lopez,Kevin Martinez
+437,3656,50,Ajuste suspension deportiva,Entregado,2025-01-15,2025-01-20,198,Diagnostico,Yamaha,YZF-R1,Alexis Diaz,Andres Mena
+438,3109,44,Diagnostico electronico,Entregado,2025-10-28,2025-11-03,2072,Diagnostico,Suzuki,GSX-R1000R,Kevin Martinez,Jose Ramirez
+439,7433,30,Diagnostico electronico,En proceso,2025-11-27,2025-12-01,1520,Pruebas,Suzuki,GSX-R1000R,Andres Mena,Edwin Chavez
+440,1476,15,Ajuste suspension deportiva,En proceso,2025-04-29,2025-05-01,643,Reparacion,Aprilia,RSV4 Factory,Mario Lopez,Alexis Diaz
+441,4198,30,Mantenimiento premium,Entregado,2025-10-18,2025-10-25,417,Pruebas,Kawasaki,Ninja ZX-10R,Edwin Chavez,Edwin Chavez
+442,8482,14,Reparacion mecanica mayor,Entregado,2025-10-14,2025-10-18,348,Diagnostico,Aprilia,RSV4 Factory,Roberto Flores,Luis Herrera
+443,8810,8,Mantenimiento premium,Entregado,2025-10-09,2025-10-15,368,Diagnostico,Ducati,Panigale V4,Victor Rivas,Kevin Martinez
+444,7684,25,Mantenimiento premium,Entregado,2025-06-28,2025-07-02,1730,Diagnostico,Yamaha,YZF-R1,Luis Herrera,Kevin Martinez
+445,6232,36,Reparacion mecanica mayor,En proceso,2025-08-01,2025-08-02,1447,Entrega,Kawasaki,Ninja ZX-10R,Fernando Ruiz,Kevin Martinez
+446,4871,4,Instalacion quickshifter,Entregado,2025-03-30,2025-04-04,1765,Pruebas,Yamaha,YZF-R1,Kevin Martinez,Fernando Ruiz
+447,3309,26,Modificacion tuning ECU,En proceso,2025-04-14,2025-04-15,968,Pruebas,Honda,CBR1000RR-R,Roberto Flores,Kevin Martinez
+448,3172,28,Instalacion quickshifter,Entregado,2025-01-13,2025-01-15,1062,Diagnostico,Yamaha,YZF-R1,Daniel Castillo,Luis Herrera
+449,1532,16,Ajuste suspension deportiva,En proceso,2025-02-23,2025-02-25,1483,Diagnostico,Kawasaki,Ninja ZX-10R,Kevin Martinez,Kevin Martinez
+450,6371,18,Reparacion mecanica mayor,Entregado,2025-04-21,2025-04-26,2001,Entrega,Suzuki,GSX-R1000R,Daniel Castillo,Carlos Mendoza
+451,1442,25,Ajuste suspension deportiva,En proceso,2025-06-18,2025-06-23,259,Diagnostico,BMW,S1000RR,Mario Lopez,Luis Herrera
+452,5318,32,Mantenimiento premium,En proceso,2025-08-10,2025-08-16,908,Entrega,Ducati,Panigale V4,Victor Rivas,Kevin Martinez
+453,9142,47,Ajuste suspension deportiva,Entregado,2025-07-23,2025-07-30,1241,Pruebas,Ducati,Panigale V4,Andres Mena,Alexis Diaz
+454,8134,31,Cambio de escape deportivo,Finalizado,2025-07-02,2025-07-05,2032,Diagnostico,Aprilia,RSV4 Factory,Jose Ramirez,Luis Herrera
+455,2154,11,Reparacion mecanica mayor,Finalizado,2025-04-23,2025-04-28,2226,Reparacion,KTM,1290 Super Duke R,Mario Lopez,Andres Mena
+456,6085,36,Diagnostico electronico,Entregado,2025-11-08,2025-11-10,1445,Diagnostico,Kawasaki,Ninja ZX-10R,Fernando Ruiz,Fernando Ruiz
+457,4701,21,Mantenimiento premium,Entregado,2025-06-09,2025-06-14,872,Diagnostico,Ducati,Panigale V4,Kevin Martinez,Kevin Martinez
+458,3108,37,Mantenimiento premium,En proceso,2025-01-02,2025-01-03,2377,Diagnostico,Suzuki,GSX-R1000R,Andres Mena,Daniel Castillo
+459,5259,34,Reparacion mecanica mayor,Entregado,2025-06-23,2025-06-28,2165,Reparacion,BMW,S1000RR,Victor Rivas,Mario Lopez
+460,2369,29,Ajuste suspension deportiva,Finalizado,2025-06-22,2025-06-25,1327,Pruebas,Aprilia,RSV4 Factory,Andres Mena,Luis Herrera
+461,7938,6,Diagnostico electronico,Entregado,2025-08-11,2025-08-16,179,Pruebas,KTM,1290 Super Duke R,Andres Mena,Jose Ramirez
+462,3009,16,Mantenimiento premium,En proceso,2025-04-09,2025-04-10,1333,Diagnostico,Aprilia,RSV4 Factory,Victor Rivas,Roberto Flores
+463,2223,32,Cambio de escape deportivo,Finalizado,2025-05-21,2025-05-22,2427,Reparacion,BMW,S1000RR,Jose Ramirez,Jose Ramirez
+464,1988,19,Ajuste suspension deportiva,En proceso,2025-02-09,2025-02-15,853,Entrega,Kawasaki,Ninja ZX-10R,Daniel Castillo,Edwin Chavez
+465,7525,33,Diagnostico electronico,Entregado,2025-02-02,2025-02-03,2090,Pruebas,Kawasaki,Ninja ZX-10R,Luis Herrera,Mario Lopez
+466,9847,29,Ajuste suspension deportiva,Finalizado,2025-08-10,2025-08-12,874,Diagnostico,Kawasaki,Ninja ZX-10R,Fernando Ruiz,Edwin Chavez
+467,3181,1,Cambio de escape deportivo,En proceso,2025-11-22,2025-11-24,1874,Entrega,Ducati,Panigale V4,Luis Herrera,Roberto Flores
+468,3450,24,Diagnostico electronico,En proceso,2025-07-03,2025-07-09,1015,Entrega,BMW,S1000RR,Jose Ramirez,Kevin Martinez
+469,6262,21,Instalacion quickshifter,En proceso,2025-03-23,2025-03-24,1583,Reparacion,Suzuki,GSX-R1000R,Jose Ramirez,Jose Ramirez
+470,6636,38,Instalacion quickshifter,En proceso,2025-09-23,2025-09-30,358,Pruebas,Suzuki,GSX-R1000R,Fernando Ruiz,Roberto Flores
+471,3936,29,Reparacion mecanica mayor,En proceso,2025-02-03,2025-02-05,575,Pruebas,Suzuki,GSX-R1000R,Alexis Diaz,Mario Lopez
+472,1570,45,Reparacion mecanica mayor,Finalizado,2025-09-27,2025-09-28,1614,Pruebas,Honda,CBR1000RR-R,Kevin Martinez,Mario Lopez
+473,1458,23,Mantenimiento premium,En proceso,2025-08-04,2025-08-11,1217,Entrega,KTM,1290 Super Duke R,Jose Ramirez,Roberto Flores
+474,6540,24,Ajuste suspension deportiva,En proceso,2025-11-17,2025-11-22,2471,Pruebas,Kawasaki,Ninja ZX-10R,Mario Lopez,Roberto Flores
+475,4009,49,Diagnostico electronico,En proceso,2025-01-10,2025-01-12,1688,Diagnostico,Honda,CBR1000RR-R,Fernando Ruiz,Carlos Mendoza
+476,4487,30,Ajuste suspension deportiva,En proceso,2025-08-28,2025-08-29,1339,Diagnostico,Kawasaki,Ninja ZX-10R,Mario Lopez,Roberto Flores
+477,7168,17,Diagnostico electronico,Finalizado,2025-01-02,2025-01-07,193,Pruebas,Ducati,Panigale V4,Fernando Ruiz,Kevin Martinez
+478,3063,46,Diagnostico electronico,Entregado,2025-05-25,2025-06-01,1270,Diagnostico,Aprilia,RSV4 Factory,Kevin Martinez,Victor Rivas
+479,3692,43,Diagnostico electronico,Entregado,2025-06-29,2025-07-01,1634,Diagnostico,BMW,S1000RR,Daniel Castillo,Edwin Chavez
+480,9275,3,Cambio de escape deportivo,Entregado,2025-01-30,2025-02-01,203,Diagnostico,Aprilia,RSV4 Factory,Roberto Flores,Roberto Flores
+481,8067,19,Mantenimiento premium,Finalizado,2025-06-04,2025-06-05,635,Diagnostico,Kawasaki,Ninja ZX-10R,Victor Rivas,Luis Herrera
+482,3144,8,Diagnostico electronico,En proceso,2025-04-21,2025-04-23,1031,Pruebas,KTM,1290 Super Duke R,Carlos Mendoza,Carlos Mendoza
+483,9915,12,Ajuste suspension deportiva,Finalizado,2025-03-03,2025-03-08,2027,Entrega,Kawasaki,Ninja ZX-10R,Carlos Mendoza,Carlos Mendoza
+484,9202,32,Reparacion mecanica mayor,En proceso,2025-09-30,2025-10-05,274,Entrega,Aprilia,RSV4 Factory,Roberto Flores,Andres Mena
+485,2451,35,Cambio de escape deportivo,Finalizado,2025-08-02,2025-08-09,643,Reparacion,Yamaha,YZF-R1,Mario Lopez,Alexis Diaz
+486,4837,43,Reparacion mecanica mayor,Finalizado,2025-01-28,2025-02-04,1717,Diagnostico,Kawasaki,Ninja ZX-10R,Edwin Chavez,Roberto Flores
+487,6884,46,Mantenimiento premium,Entregado,2025-10-16,2025-10-19,1275,Pruebas,Honda,CBR1000RR-R,Andres Mena,Kevin Martinez
+488,1601,35,Diagnostico electronico,Finalizado,2025-09-16,2025-09-23,720,Pruebas,Ducati,Panigale V4,Edwin Chavez,Victor Rivas
+489,8801,20,Reparacion mecanica mayor,Finalizado,2025-09-10,2025-09-13,422,Reparacion,Honda,CBR1000RR-R,Jose Ramirez,Luis Herrera
+490,1067,37,Instalacion quickshifter,En proceso,2025-06-16,2025-06-20,2003,Reparacion,Honda,CBR1000RR-R,Mario Lopez,Alexis Diaz
+491,9482,13,Reparacion mecanica mayor,Finalizado,2025-03-30,2025-04-03,842,Reparacion,Yamaha,YZF-R1,Luis Herrera,Daniel Castillo
+492,6617,9,Ajuste suspension deportiva,Entregado,2025-03-09,2025-03-12,742,Diagnostico,Ducati,Panigale V4,Jose Ramirez,Edwin Chavez
+493,1776,50,Mantenimiento premium,Entregado,2025-04-12,2025-04-18,676,Diagnostico,KTM,1290 Super Duke R,Alexis Diaz,Jose Ramirez
+494,3827,22,Diagnostico electronico,En proceso,2025-01-12,2025-01-13,1984,Pruebas,Aprilia,RSV4 Factory,Carlos Mendoza,Carlos Mendoza
+495,7986,46,Reparacion mecanica mayor,En proceso,2025-10-02,2025-10-06,1978,Reparacion,Kawasaki,Ninja ZX-10R,Daniel Castillo,Jose Ramirez
+496,9561,15,Ajuste suspension deportiva,Finalizado,2025-09-04,2025-09-11,1223,Entrega,Kawasaki,Ninja ZX-10R,Kevin Martinez,Fernando Ruiz
+497,9528,16,Modificacion tuning ECU,En proceso,2025-04-08,2025-04-12,700,Entrega,Kawasaki,Ninja ZX-10R,Andres Mena,Fernando Ruiz
+498,6816,41,Mantenimiento premium,Entregado,2025-08-21,2025-08-22,1671,Entrega,Suzuki,GSX-R1000R,Victor Rivas,Fernando Ruiz
+499,5930,27,Modificacion tuning ECU,En proceso,2025-05-21,2025-05-26,517,Reparacion,KTM,1290 Super Duke R,Jose Ramirez,Alexis Diaz
+500,1035,14,Cambio de escape deportivo,Finalizado,2025-06-27,2025-07-04,1944,Reparacion,BMW,S1000RR,Andres Mena,Carlos Mendoza

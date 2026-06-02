@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+plotly
+matplotlib
+seaborn
+scikit-learn
+fpdf
+google-genai
+smtplib
+email
+email.mime.multipart
