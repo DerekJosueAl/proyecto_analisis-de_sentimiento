@@ -17,12 +17,13 @@ import smtplib
 # Cargar variables desde .env
 load_dotenv()
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-EMAIL_REMITENTE = os.getenv("EMAIL_REMITENTE")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+def conectar_gemini():
+    api_key = st.secrets["GEMINI_API_KEY"]
+    return genai.Client(api_key=api_key)
 
-# Conectar Gemini
-client = genai.Client(api_key=GEMINI_API_KEY)
+client = conectar_gemini()
+
+# Variables de correo desde Secrets
 
 # ================= CONFIGURACIÓN =================
 st.set_page_config(page_title="Taller de Motos Casa Tuning", layout="wide")
@@ -100,15 +101,11 @@ with tab1:
     st.session_state.active_tab = "facturacion"
 
     # ================= CONFIGURACIÓN =================
-    load_dotenv()
-
     def conectar_gemini():
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("❌ No se encontró GEMINI_API_KEY en .env")
-        return genai.Client(api_key=api_key)
+    api_key = st.secrets["GEMINI_API_KEY"]
+    return genai.Client(api_key=api_key)
 
-    client = conectar_gemini()
+client = conectar_gemini()
 
     #================= SESSION STATE =================
     if 'ventas_diarias' not in st.session_state:
