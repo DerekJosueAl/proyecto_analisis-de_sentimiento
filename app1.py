@@ -14,22 +14,35 @@ from utils.preprocess import (
 )
 from dotenv import load_dotenv
 
-# Cargar variables desde .env
+# Cargar variables desde .env (para local)
 load_dotenv()
 
-# Intentar cargar desde Secrets si .env no está disponible (Útil para Streamlit Cloud)
-GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
-EMAIL_REMITENTE = st.secrets.get("EMAIL_REMITENTE", os.getenv("EMAIL_REMITENTE"))
-EMAIL_PASSWORD = st.secrets.get("EMAIL_PASSWORD", os.getenv("EMAIL_PASSWORD"))
-
-# Conectar Gemini una única vez de manera global
-client = genai.Client(api_key=GEMINI_API_KEY)
+def obtener_credenciales():
+    """Recupera las credenciales de forma segura priorizando los Secrets de Streamlit"""
+    # Intentar obtener de st.secrets de forma segura usando estructuras de control de Streamlit
+    try:
+        gemini_key = st.secrets["GEMINI_API_KEY"]
+        email_rem = st.secrets["EMAIL_REMITENTE"]
+        email_pass = st.secrets["EMAIL_PASSWORD"]
+    except Exception:
+        # Si falla (ej. estamos en entorno local), recurrir a os.getenv
+        gemini_key = os.getenv("GEMINI_API_KEY")
+        email_rem = os.getenv("EMAIL_REMITENTE")
+        email_pass = os.getenv("EMAIL_PASSWORD")
+        
+    return gemini_key, email_rem, email_pass
 
 def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
     """Función que el Agente ejecuta autónomamente para enviar el correo por Gmail"""
+    _, email_remitente, email_password = obtener_credenciales()
+    
+    if not email_remitente or not email_password:
+        st.error("❌ No se puede enviar el correo: Faltan las credenciales SMTP.")
+        return False
+        
     try:
         msg = MIMEMultipart()
-        msg['From'] = EMAIL_REMITENTE
+        msg['From'] = email_remitente
         msg['To'] = destinatario
         msg['Subject'] = asunto
         
@@ -38,8 +51,8 @@ def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
         # Conexión segura con el servidor SMTP de Gmail (Puerto 587)
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login(EMAIL_REMITENTE, EMAIL_PASSWORD)
-        server.sendmail(EMAIL_REMITENTE, destinatario, msg.as_string())
+        server.login(email_remitente, email_password)
+        server.sendmail(email_remitente, destinatario, msg.as_string())
         server.quit()
         return True
     except Exception as e:
@@ -54,6 +67,13 @@ def run_app():
     )
     st.title("📊 Dashboard de Análisis de Sentimiento")
     st.markdown("---")
+
+    # Validar la existencia de las llaves dentro del flujo de la app
+    gemini_api_key, _, _ = obtener_credenciales()
+    if not gemini_api_key:
+        st.error("❌ **Error Crítico:** `GEMINI_API_KEY` no se encuentra definida. Por favor verifica tus Secrets de Streamlit.")
+        st.info("Asegúrate de que el formato en el panel sea exactamente:\n`GEMINI_API_KEY = \"tu_clave\"` sin espacios raros al inicio.")
+        st.stop() # Detiene la app de manera limpia en la UI en vez de congelarse
 
     # ================= FUNCIONES AUXILIARES =================
     @st.cache_data
@@ -96,12 +116,11 @@ def run_app():
             df = process_data(df_raw)
         
         # ========================================================
-        # SECCIÓN: SIMULADOR DE ALERTAS Y FORMULARIO (CORREGIDO CON st.form)
+        # SECCIÓN: SIMULADOR DE ALERTAS Y FORMULARIO
         # ========================================================
         with st.expander("✍️ Registrar Nueva Opinión de Cliente (Simulador de Alertas para la IA)", expanded=True):
             st.markdown("Ingresa una queja real para ver al Agente Autónomo tomar el control y enviar el correo.")
             
-            # Usar st.form previene la pérdida de datos del componente durante la recarga en la nube
             with st.form("form_opinion", clear_on_submit=True):
                 col_sim1, col_sim2, col_sim3 = st.columns([2, 1, 1])
                 with col_sim1:
@@ -115,7 +134,6 @@ def run_app():
                                               placeholder="Ej. El tuning quedó mal armado, la moto vibra demasiado en alta velocidad y no me quieren dar garantía.")
                 sim_sucursal = "Matagalpa"
                 
-                # El botón de envío ahora es un submit de formulario obligatorio
                 enviar_formulario = st.form_submit_button("🚨 Enviar Opinión y Activar Flujos Autónomos", use_container_width=True)
             
             if enviar_formulario:
@@ -144,6 +162,9 @@ def run_app():
                     if sentimiento_determinado == 'Negativo':
                         with st.spinner("🤖 El Agente Autónomo está analizando la queja y redactando la solución..."):
                             try:
+                                # INICIALIZACIÓN LAZY: El cliente se crea justo aquí, evitando congelamiento al arranque
+                                client = genai.Client(api_key=gemini_api_key)
+                                
                                 prompt_agente = f"""
                                 Eres el Agente de Contingencia Automatizado de 'Taller de Motos Casa Tuning'.
                                 Tu objetivo es recuperar de inmediato a un cliente insatisfecho enviándole una propuesta de solución.
