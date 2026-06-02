@@ -202,6 +202,8 @@ def run_app():
         # --- 10. Descargar reporte PDF ---
         def generar_pdf(stats):
             from fpdf import FPDF
+            import io
+
             pdf = FPDF()
             pdf.add_page()
             pdf.set_font("Arial", "B", 16)
@@ -213,19 +215,28 @@ def run_app():
                 pdf.cell(0, 10, f"Cliente: {row['cliente']} ({row['categoria']})", ln=True)
                 pdf.set_font("Arial", "", 11)
                 pdf.multi_cell(0, 8, f"Gasto total: ${row['total_gastado']:.2f}\n"
-                                     f"Número de reparaciones: {row['num_reparaciones']}\n"
-                                     f"Visitas al año: {row['visitas_al_anio']:.2f}\n"
-                                     f"Días desde última reparación: {row['dias_ultima_reparacion']}\n"
-                                     f"Recomendación: {row['recomendacion']}")
-                pdf.ln(5)
+                             f"Número de reparaciones: {row['num_reparaciones']}\n"
+                             f"Visitas al año: {row['visitas_al_anio']:.2f}\n"
+                             f"Días desde última reparación: {row['dias_ultima_reparacion']}\n"
+                             f"Recomendación: {row['recomendacion']}")
+            pdf.ln(5)
 
-            pdf_output = io.BytesIO()
-            pdf.output(pdf_output)
-            pdf_output.seek(0)
-            return pdf_output
+        # ✅ Usar dest="S" para obtener el PDF como bytes
+            pdf_bytes = pdf.output(dest="S").encode("latin1")
+
+    # Guardar en buffer para Streamlit
+    pdf_output = io.BytesIO(pdf_bytes)
+    return pdf_output
 
         pdf_output = generar_pdf(cliente_stats)
-        st.download_button("📥 Descargar Reporte PDF", pdf_output, "reporte.pdf", "application/pdf", use_container_width=True, key="pdf_download")
+        st.download_button(
+            "📥 Descargar Reporte PDF",
+            data=pdf_output,
+            file_name="reporte.pdf",
+            mime="application/pdf",
+            use_container_width=True,
+            key="pdf_download"
+        )
         
         # --- 11. Clasificación manual (Con Probabilidades y Diagnóstico Dinámico) ---
         st.markdown("---")
