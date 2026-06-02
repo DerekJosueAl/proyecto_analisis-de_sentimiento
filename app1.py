@@ -17,24 +17,26 @@ import google.genai as genai
 import smtplib
 
 # Cargar variables desde .env
-load_dotenv()
+# Conectar Gemini usando Secrets
+def conectar_gemini():
+    api_key = st.secrets["GEMINI_API_KEY"]
+    return genai.Client(api_key=api_key)
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-EMAIL_REMITENTE = os.getenv("EMAIL_REMITENTE")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+client = conectar_gemini()
 
-# Conectar Gemini
-client = genai.Client(api_key=GEMINI_API_KEY)
+# Variables de correo desde Secrets
+EMAIL_REMITENTE = st.secrets["EMAIL_REMITENTE"]
+EMAIL_PASSWORD = st.secrets["EMAIL_PASSWORD"]
+
 def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
-    """Función que el Agente ejecuta autónomamente para enviar el correo por Gmail"""
+    """Función para enviar correo por Gmail usando Secrets"""
     try:
         msg = MIMEMultipart()
         msg['From'] = EMAIL_REMITENTE
         msg['To'] = destinatario
         msg['Subject'] = asunto
-        
         msg.attach(MIMEText(cuerpo_mensaje, 'plain'))
-        
+
         # Conexión segura con el servidor SMTP de Gmail (Puerto 587)
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
@@ -43,7 +45,7 @@ def enviar_correo_real(destinatario, asunto, cuerpo_mensaje):
         server.quit()
         return True
     except Exception as e:
-        st.error(f"Error técnico al enviar el correo: {e}")
+        st.error(f"❌ Error técnico al enviar el correo: {e}")
         return False
 
 def run_app():
