@@ -23,6 +23,9 @@ def conectar_gemini():
     return genai.Client(api_key=api_key)
 
 client = conectar_gemini()
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+client = genai.Client(api_key=GEMINI_API_KEY)
+
 
 # Variables de correo desde Secrets
 EMAIL_REMITENTE = st.secrets["EMAIL_REMITENTE"]
