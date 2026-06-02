@@ -203,34 +203,32 @@ def run_app():
         def generar_pdf(stats):
             from fpdf import FPDF
             import io
-
+        
             pdf = FPDF()
             pdf.add_page()
             pdf.set_font("Arial", "B", 16)
             pdf.cell(0, 10, "Reporte de Clientes - Taller Casa Tuning", ln=True, align="C")
             pdf.ln(10)
-
+        
             for _, row in stats.iterrows():
                 pdf.set_font("Arial", "B", 12)
                 pdf.cell(0, 10, f"Cliente: {row['cliente']} ({row['categoria']})", ln=True)
                 pdf.set_font("Arial", "", 11)
                 pdf.multi_cell(0, 8, f"Gasto total: ${row['total_gastado']:.2f}\n"
-                             f"Número de reparaciones: {row['num_reparaciones']}\n"
-                             f"Visitas al año: {row['visitas_al_anio']:.2f}\n"
-                             f"Días desde última reparación: {row['dias_ultima_reparacion']}\n"
-                             f"Recomendación: {row['recomendacion']}")
-            pdf.ln(5)
-
-        # ✅ Usar dest="S" para obtener el PDF como bytes
+                                     f"Número de reparaciones: {row['num_reparaciones']}\n"
+                                     f"Visitas al año: {row['visitas_al_anio']:.2f}\n"
+                                     f"Días desde última reparación: {row['dias_ultima_reparacion']}\n"
+                                     f"Recomendación: {row['recomendacion']}")
+                pdf.ln(5)
+        
+            # ✅ Generar PDF en memoria
             pdf_bytes = pdf.output(dest="S").encode("latin1")
-
-    # Guardar en buffer para Streamlit
-    pdf_output = io.BytesIO(pdf_bytes)
-    return pdf_output
+            pdf_output = io.BytesIO(pdf_bytes)
+            return pdf_output
 
         pdf_output = generar_pdf(cliente_stats)
         st.download_button(
-            "📥 Descargar Reporte PDF",
+            label="📥 Descargar Reporte PDF",
             data=pdf_output,
             file_name="reporte.pdf",
             mime="application/pdf",
